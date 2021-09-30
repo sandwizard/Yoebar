@@ -1,0 +1,16 @@
+body {
+  font-size: 16px;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+#header-nav
+{
+  background-color: #333333;
+  
+}
+#logo-img{
+  background: url('../img/logo.svg') no-repeat;
+  width: 70px;
+  height: 70px;
+  background-size: 70px 70px;
+}
