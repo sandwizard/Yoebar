@@ -7,10 +7,27 @@ body {
 {
   background-color: #333333;
   
+  
 }
+
 #logo-img{
   background: url('../img/logo.svg') no-repeat;
-  width: 70px;
-  height: 70px;
-  background-size: 70px 70px;
+  width: 60px;
+  height: 60px;
+  background-size: 60px 60px;
+}
+.navbar-header{
+  position: relative;
+  left: 1em;
+}
+
+.navbar-brand{
+  
+  position: relative;
+  vertical-align: middle;
+  left: 2.5em;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-weight: 900;
 }
