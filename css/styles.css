@@ -18,16 +18,33 @@ body {
 }
 .navbar-header{
   position: relative;
-  left: 1em;
+  left: 2%;
 }
 
 .navbar-brand{
   
   position: relative;
   vertical-align: middle;
-  left: 2.5em;
+  left: 11.5%;
   font-size: 1.5em;
   text-transform: uppercase;
   letter-spacing: 0.4em;
   font-weight: 900;
+  
+}
+
+#nav-list a{
+  color: #fff;
+  text-align: center;
+  
+}
+
+#nav-list a:hover{
+  color: #808080;
+}
+#nav-list a:active{
+  color: #808080;
+}
+.nav-item{
+  width: 6.5em;
 }
