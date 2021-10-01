@@ -45,6 +45,9 @@ body {
 #nav-list .nav-link{
   color: #fff;
   vertical-align: middle;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+
   
   
 }
