@@ -16,6 +16,7 @@ body {
   height: 60px;
   background-size: 60px 60px;
 }
+
 .navbar-header{
   position: relative;
   left: 2%;
@@ -33,18 +34,35 @@ body {
   
 }
 
-#nav-list a{
+#nav-list .nav-link:hover{
+  color: #808080;
+}
+
+.nav-item{
+  width: 6.5em;
+}
+
+#nav-list .nav-link{
   color: #fff;
-  text-align: center;
+  vertical-align: middle;
+  
   
 }
 
-#nav-list a:hover{
-  color: #808080;
+.icon-cart-icon {
+  content: "\e900";
+  color: #fff;
+  font-size: 2em;
 }
-#nav-list a:active{
-  color: #808080;
+ul > li > a:hover {
+  content: "\e900";
+  color: rgb(233, 79, 79);
 }
-.nav-item{
-  width: 6.5em;
+
+.nav-icon{
+  fill: #fff;
+  width: 3.1em;
+}
+.nav-icon:hover{
+  fill: #808080;
 }
