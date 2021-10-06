@@ -19,6 +19,7 @@ body {
 
 .navbar-header{
   position: relative;
+  width:fit-content;
   left: 2%;
 }
 
@@ -26,10 +27,10 @@ body {
   
   position: relative;
   vertical-align: middle;
-  left: 11.5%;
-  font-size: 1.5em;
+  left: 10%;
+  font-size: 1.4em;
   text-transform: uppercase;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.5em;
   font-weight: 900;
   
 }
@@ -38,34 +39,130 @@ body {
   color: #808080;
 }
 
-.nav-item{
-  width: 6.5em;
-}
 
-#nav-list .nav-link{
+
+.nav-link{
   color: #fff;
   vertical-align: middle;
   font-weight: 600;
-  letter-spacing: 0.02em;
-
+  letter-spacing: 0.04em;
+  font-size: 0.75em;
   
   
 }
 
-.icon-cart-icon {
-  content: "\e900";
-  color: #fff;
-  font-size: 2em;
-}
+
 ul > li > a:hover {
   content: "\e900";
   color: rgb(233, 79, 79);
 }
 
+#products-icon .cls-2{
+  fill: #999;
+}
 .nav-icon{
   fill: #fff;
-  width: 3.1em;
+  height: 45px;
+  margin: auto;
+  margin-bottom: 0.3em;
 }
 .nav-icon:hover{
   fill: #808080;
+}
+.nav-link{
+  padding-bottom: 0;
+  padding-top: 0;
+}
+#header-nav .container-fluid{
+  flex-wrap: nowrap;
+}
+/********** xl only **********/
+@media (min-width: 1200px) {
+
+}
+
+
+/********** lg only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Header */
+
+  .navbar-brand{
+    font-size: 1.1em;
+  }
+ 
+  /* End Header */
+}
+
+/********** md devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+
+  /** brand disapear make icons and links extemd to end**/
+  #nav_collapsible{
+    width:100%;
+    padding-left: 50px;
+    
+  }
+
+  #nav-list{
+    justify-content: space-between;
+  }
+  
+
+  #cart-icon{
+    height: 45px;
+  }
+}
+
+
+/********** sm  devices only **********/
+@media (min-width: 576px) and (max-width: 767px) {
+  /* Header */
+  #nav_collapsible{
+    width:100%;
+    padding-left: 6%;
+    
+  }
+  #nav-list{
+    justify-content: space-between;
+  }
+  #cart-icon{
+    height: 45px;
+  }
+  .nav-link{
+    font-size:0.6em ;
+  }
+}
+  /* End Header */
+@media (max-width: 575px) {
+  #logo-img{
+
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+  }
+  #header-nav .container-fluid{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  #nav_collapsible{
+    width:100%;
+    padding-left : 5%;
+  }
+  #nav-list{
+    justify-content: space-between;
+    
+  }
+  #cart-icon{
+    height: 30px;
+  }
+ 
+  .nav-link{
+    font-size:0.4em ;
+    padding-left:5px;
+    padding-right: 5px;
+  }
+  .nav-icon{
+    height: 30px;
+  }
+  /* Header */
 }
