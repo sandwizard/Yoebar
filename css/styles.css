@@ -58,18 +58,9 @@ body {
   fill: #999;
 
 }
-
-
-
-
-
-
-
 #products-icon .cls-2{
   fill: #999;
 }
-
-
 .nav-link{
   padding-bottom: 0;
   padding-top: 0;
@@ -77,6 +68,22 @@ body {
 #header-nav .container-fluid{
   flex-wrap: nowrap;
 }
+.carousel-item{
+  height: 32rem;
+  background:#777;
+  position: relative;
+  
+  
+}
+.slide-item{
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 50%;
+  
+}
+
 /********** xl only **********/
 @media (min-width: 1200px) {
 
