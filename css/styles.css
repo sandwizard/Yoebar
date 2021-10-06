@@ -80,7 +80,7 @@ body {
   left: 0;
   right: 0;
   text-align: center;
-  top: 50%;
+  top: 43%;
   
 }
 
@@ -104,6 +104,9 @@ body {
 /********** md devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
 
+  .carousel-item{
+    height: 20rem;
+  }
   /** brand disapear make icons and links extemd to end**/
   #nav_collapsible{
     width:100%;
@@ -125,6 +128,9 @@ body {
 /********** sm  devices only **********/
 @media (min-width: 576px) and (max-width: 767px) {
   /* Header */
+  .carousel-item{
+    height: 20rem;
+  }
   #nav_collapsible{
     width:100%;
     padding-left: 6%;
@@ -142,6 +148,9 @@ body {
 }
   /* End Header */
 @media (max-width: 575px) {
+  .carousel-item{
+    height: 15rem;
+  }
   #logo-img{
 
     width: 40px;
