@@ -34,13 +34,6 @@ body {
   font-weight: 900;
   
 }
-
-#nav-list .nav-link:hover{
-  color: #808080;
-}
-
-
-
 .nav-link{
   color: #fff;
   vertical-align: middle;
@@ -48,18 +41,7 @@ body {
   letter-spacing: 0.04em;
   font-size: 0.75em;
   text-align: center;
-  
-  
-}
-
-
-ul > li > a:hover {
-  content: "\e900";
-  color: rgb(233, 79, 79);
-}
-
-#products-icon .cls-2{
-  fill: #999;
+   
 }
 .nav-icon{
   fill: #fff;
@@ -67,6 +49,26 @@ ul > li > a:hover {
   margin: auto;
   margin-bottom: 0.3em;
 }
+
+.nav-link:hover,.nav-link:focus{
+  color: #999;
+
+}
+.nav-link:hover svg,.nav-link:focus svg{
+  fill: #999;
+
+}
+
+
+
+
+
+
+
+#products-icon .cls-2{
+  fill: #999;
+}
+
 
 .nav-link{
   padding-bottom: 0;
