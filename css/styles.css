@@ -29,6 +29,9 @@ body {
   width:fit-content;
   left: 2%;
 }
+.tile-icon{
+  width: inherit;
+}
 .navbar-brand{ 
   position: relative;
   vertical-align: middle;
@@ -51,6 +54,12 @@ body {
   height: 45px;
   margin: auto;
   margin-bottom: 0.3em;
+}
+.tile-icon{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 .nav-link:hover,.nav-link:focus{
   color: #999;
@@ -82,10 +91,17 @@ body {
   text-align: center;
   top: 43%;  
 }
+#home-tiles{
+  margin-top: 20px;
+}
 .nav-tile{
   background-color: #999;
-  margin-top: 40px;
-  height: 300px; 
+  padding: 10%;
+  width: 80%;
+  margin: auto;
+  margin-top: 40px; 
+  text-align: center;
+  font-size: 1em;
 }
 #main-content{
   padding-left: 10px;
