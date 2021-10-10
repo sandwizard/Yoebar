@@ -3,28 +3,33 @@ body {
   color: #fff;
   font-family: 'Open Sans', sans-serif;
 }
-#header-nav
-{
-  background-color: #333333;
-  
-  
+#header-nav{
+  background-color: #333333; 
 }
-
 #logo-img{
   background: url('../img/logo.svg') no-repeat;
   width: 60px;
   height: 60px;
   background-size: 60px 60px;
 }
-
+#building-img{
+  width: 100%;
+  height: inherit;
+  background: url('../img/building.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #777;  
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
 .navbar-header{
   position: relative;
   width:fit-content;
   left: 2%;
 }
-
-.navbar-brand{
-  
+.navbar-brand{ 
   position: relative;
   vertical-align: middle;
   left: 10%;
@@ -32,7 +37,6 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.5em;
   font-weight: 900;
-  
 }
 .nav-link{
   color: #fff;
@@ -40,8 +44,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.04em;
   font-size: 0.75em;
-  text-align: center;
-   
+  text-align: center;  
 }
 .nav-icon{
   fill: #fff;
@@ -49,14 +52,11 @@ body {
   margin: auto;
   margin-bottom: 0.3em;
 }
-
 .nav-link:hover,.nav-link:focus{
   color: #999;
-
 }
 .nav-link:hover svg,.nav-link:focus svg{
   fill: #999;
-
 }
 #products-icon .cls-2{
   fill: #999;
@@ -71,19 +71,26 @@ body {
 .carousel-item{
   height: 32rem;
   background:#777;
-  position: relative;
-  
-  
+  position: relative; 
+  background-position: center;
+  background-size: cover;       
 }
 .slide-item{
   position: absolute;
   left: 0;
   right: 0;
   text-align: center;
-  top: 43%;
-  
+  top: 43%;  
 }
-
+.nav-tile{
+  background-color: #999;
+  margin-top: 40px;
+  height: 300px; 
+}
+#main-content{
+  padding-left: 10px;
+  padding-right: 10px;
+}
 /********** xl only **********/
 @media (min-width: 1200px) {
 
