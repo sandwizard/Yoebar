@@ -93,22 +93,19 @@ a{
   padding-bottom: 60px;
 
 }
-.open-hours{
-  padding:5%
-}
 .vr{
   color: #2B2B2B;
   padding: 1px;
 
 }
-.about-text{
-  padding: 5%;
-}
+
 .home-tiles-2{
   height: 300px;
   background-color: #7972D3;
 }
 .open-hours{
+  width: 387px;
+  margin:auto ;
   padding-top: 30px;
   padding-bottom: 30px;
 
@@ -118,26 +115,29 @@ a{
   height: 600px;
 }
 .open-hours > h1{
-  font-size: 3.6em;
-  font-weight: 300;
+  font-size: 3.4em;
+  font-weight: 400;
 }
 .open-hours > h2{
   position: relative;
   bottom: 1.2em;
   left: 0.3em;
   font-size: 1.6em;
-  font-weight: 100;
+  font-weight: 400;
 }
+/* 9 and 8 in open hrs*/
 .open-hours span:nth-child(3){
   color: #844138;
   text-align: end;
   font-size: 2.5em;
   bottom: 20px;
 }
+/* am and pm elements*/
 .open-hours span:nth-child(3) span{
   font-size: 0.6em;
 
 }
+
 .open-hours span:nth-child(4){
   color: #333;
   font-size: 1.3em;
