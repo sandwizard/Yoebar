@@ -136,7 +136,14 @@ a{
   font-weight: 400;
 }
 .home-tiles-2 .nav-tile{
+  color: #7972D3;
   border-radius: 50%;
+
+}
+.home-tiles-2 p{
+  height: 200px;
+  margin-top: 40px;
+  text-align: center;
 
 }
 /* 9 and 8 in open hrs*/
@@ -199,7 +206,10 @@ a{
   vertical-align: baseline;
 
 }
-
+.home-tiles-2 .tile-icon{
+  width: 100%;
+  fill: #7972D3;
+}
 #main-content{
   padding-left: 10px;
   padding-right: 10px;
@@ -287,7 +297,7 @@ a{
     padding-top: 100px;
     padding-bottom: 80px;
   }
- 
+  
   .tile-icon{
     margin-top: 0;
     height: 85%;
