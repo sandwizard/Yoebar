@@ -44,12 +44,7 @@ a{
 }
 
 
-.tile-icon{
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
 
-}
 .nav-link{
   color: #fff;
   vertical-align: middle;
@@ -102,7 +97,7 @@ a{
 .about-text h1{
   font-weight: 550;
 }
-.about-text >p{
+.about-text > p{
   font-style: oblique;
   color:#444;
   font-weight: bold;
@@ -121,7 +116,11 @@ a{
 }
 .home-tiles{
   padding-top: 100px;
-  height: 600px;
+}
+.home-tiles p{
+  height: 200px;
+  margin-top: 40px;
+  text-align: center;
 }
 .open-hours > h1{
   font-size: 3.4em;
@@ -168,22 +167,31 @@ a{
 .nav-tile{
   border-radius: 25%;
   padding: 10%;
-  width: 80%;
+  width: 18.5vw;
+  height: 19vw;
   margin: auto;
   margin-top: 40px; 
   text-align: center;
-  font-size: 1em;
+  font-size: 1.3vw;
   font-weight: 900;
-  color:#4D4D4D;
+  color:#72D6BF;
   background-color: white;
 }
+.nav-tile > span{
+  margin-top: 10px;
 
-.nav-tile:hover,.nav-tile:focus{
-  color: #2B2B2B;
 }
+
+
 .tile-icon{
-  fill: #4D4D4D;
-  width: inherit;
+  margin-top:1vw;
+  margin-bottom:1vw;
+  fill: #72D6BF;
+  width:75%;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: baseline;
+
 }
 
 #main-content{
@@ -209,6 +217,7 @@ a{
 
 /********** md devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
+  
   .about-text{
     margin-top: 10px;
   }
@@ -252,6 +261,25 @@ a{
 
 /********** sm  devices only **********/
 @media (min-width: 576px) and (max-width: 767px) {
+  
+  .home-tiles{
+    padding-top: 60px;
+  }
+ 
+  .tile-icon{
+    margin-top: 0;
+    height: 85%;
+  }
+  .nav-tile{
+    margin: auto;
+    width: 42vw;
+    height: 30vw;
+    border-radius: 20em;
+  }
+  .nav-tile > span{
+    font-size: 2.5vw;
+  }
+
   .about-text{
     margin-top: 20px;
   }
@@ -260,6 +288,9 @@ a{
   }
   .open-hours{
     width: 100%;
+  }
+  .open-hours > h1{
+    font-size: 3em;
   }
   .open-hours span:nth-child(4){
 
@@ -295,6 +326,26 @@ a{
 }
   /* End Header */
 @media (max-width: 575px) {
+  .home-tiles p{
+    margin-top: 4vw;
+    font-size: 0.6em;
+    height: auto;
+  }
+  .home-tiles{
+    padding-top: 60px;
+  }
+  .nav-tile > span{
+    font-size: 2.5vw;
+  }
+  .tile-icon{
+    height: 85%;
+  }
+  .nav-tile{
+    margin: auto;
+    width: 42vw;
+    height: 30vw;
+    border-radius: 20em;
+  }
   .about-text{
     margin-top: 20px;
   }
