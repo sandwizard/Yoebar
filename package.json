@@ -1,0 +1,22 @@
+{
+  "name": "lhaki-general-store",
+  "version": "1.0.0",
+  "description": "web packages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandwizard/lhaki-general-store.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sandwizard/lhaki-general-store/issues"
+  },
+  "homepage": "https://github.com/sandwizard/lhaki-general-store#readme",
+  "dependencies": {
+    "sass": "^1.42.1"
+  }
+}
