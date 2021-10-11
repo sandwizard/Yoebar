@@ -94,11 +94,14 @@ a{
 
 }
 .vr{
+  margin:0 auto;
   color: #2B2B2B;
   padding: 1px;
 
 }
-
+.about-text >p{
+  padding-left: 8%;
+}
 .home-tiles-2{
   height: 300px;
   background-color: #7972D3;
@@ -137,9 +140,12 @@ a{
   font-size: 0.6em;
 
 }
+.about-text{
 
+}
 .open-hours span:nth-child(4){
   color: #333;
+  font-weight: 800;
   font-size: 1.3em;
   font-style: italic;
   text-align: center;
@@ -168,9 +174,7 @@ a{
   color:#4D4D4D;
   background-color: white;
 }
-.open-hours > h2{
 
-}
 .nav-tile:hover,.nav-tile:focus{
   color: #2B2B2B;
 }
@@ -202,6 +206,22 @@ a{
 
 /********** md devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
+  .intro{
+    padding-top: 50px;
+  }
+  .open-hours{
+    width: 100%;
+  }
+  .open-hours span:nth-child(4){
+
+    font-size: 1.3em;
+
+    text-align: end;
+
+  }
+  .open-hours span:nth-child(3){
+    text-align: center;
+  }
 
   .carousel-item{
     height: 20rem;
@@ -226,6 +246,22 @@ a{
 
 /********** sm  devices only **********/
 @media (min-width: 576px) and (max-width: 767px) {
+  .intro{
+    padding-top: 35px
+  }
+  .open-hours{
+    width: 100%;
+  }
+  .open-hours span:nth-child(4){
+
+    font-size: 1.3em;
+
+    text-align: end;
+
+  }
+  .open-hours span:nth-child(3){
+    text-align: center;
+  }
   /* Header */
   .carousel-item{
     height: 20rem;
@@ -244,9 +280,35 @@ a{
   .nav-link{
     font-size:0.6em ;
   }
+  .open-hours{
+    margin: 0;
+  }
 }
   /* End Header */
 @media (max-width: 575px) {
+  .intro{
+    padding-top: 35px
+  }
+  .open-hours > h1{
+    font-size: 2em;
+  }
+  .open-hours > h2{
+    font-size: 1.2em;
+  }
+  .open-hours{
+    width: 100%;
+  }
+  .open-hours span:nth-child(4){
+
+    font-size: 1em;
+
+    text-align: end;
+
+  }
+  .open-hours span:nth-child(3){
+    text-align: center;
+    font-size: 1.4em;
+  }
   .carousel-item{
     height: 15rem;
   }
