@@ -99,7 +99,13 @@ a{
   padding: 1px;
 
 }
+.about-text h1{
+  font-weight: 550;
+}
 .about-text >p{
+  font-style: oblique;
+  color:#444;
+  font-weight: bold;
   padding-left: 8%;
 }
 .home-tiles-2{
@@ -138,9 +144,6 @@ a{
 /* am and pm elements*/
 .open-hours span:nth-child(3) span{
   font-size: 0.6em;
-
-}
-.about-text{
 
 }
 .open-hours span:nth-child(4){
@@ -206,6 +209,9 @@ a{
 
 /********** md devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
+  .about-text{
+    margin-top: 10px;
+  }
   .intro{
     padding-top: 50px;
   }
@@ -246,6 +252,9 @@ a{
 
 /********** sm  devices only **********/
 @media (min-width: 576px) and (max-width: 767px) {
+  .about-text{
+    margin-top: 20px;
+  }
   .intro{
     padding-top: 35px
   }
@@ -286,6 +295,9 @@ a{
 }
   /* End Header */
 @media (max-width: 575px) {
+  .about-text{
+    margin-top: 20px;
+  }
   .intro{
     padding-top: 35px
   }
