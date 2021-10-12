@@ -214,6 +214,23 @@ a{
   padding-left: 10px;
   padding-right: 10px;
 }
+.panel-footer{
+  height: 400px;
+  padding-top: 80px;
+  background-color: #61A3AA;
+}
+.facebook-and-twitter{
+  position: absolute;
+  right: 0px;
+}
+.social-icon{
+  width: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top:20px
+}
+.social-icon .cls-1{fill:#fff;}
+.social-icon .cls-2{fill:#61a3aa;}
 /********** xl only **********/
 @media (min-width: 1200px) {
 
@@ -445,6 +462,9 @@ a{
   }
   .nav-icon{
     height: 30px;
+  }
+  .home-tiles-2 .tile-icon{
+    height: 100%;
   }
   /* Header */
 }
