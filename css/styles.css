@@ -78,7 +78,7 @@ a{
   flex-wrap: nowrap;
 }
 .carousel-item{
-  height: 36rem;
+  height: 60vw;
   background:#777;
   position: relative; 
   background-position: center;
@@ -122,6 +122,7 @@ a{
   padding-bottom:250px ;
 }
 .home-tiles p{
+  font-size: 1.4em;
   height: 200px;
   margin-top: 40px;
   text-align: center;
@@ -143,6 +144,7 @@ a{
 
 }
 .home-tiles-2 p{
+  font-size: 1.4em;
   height: 200px;
   margin-top: 40px;
   text-align: center;
@@ -280,9 +282,6 @@ a{
     text-align: center;
   }
 
-  .carousel-item{
-    height: 20rem;
-  }
   /** brand disapear make icons and links extemd to end**/
   #nav_collapsible{
     width:100%;
@@ -354,9 +353,7 @@ a{
     text-align: center;
   }
   /* Header */
-  .carousel-item{
-    height: 20rem;
-  }
+
   #nav_collapsible{
     width:100%;
     padding-left: 6%;
@@ -378,7 +375,7 @@ a{
   /* End Header */
 @media (max-width: 575px) {
   .home-tiles p{
-    margin-top: 4vw;
+    margin-top: 0.8em;
     font-size: 0.6em;
     height: auto;
   }
@@ -391,11 +388,17 @@ a{
   
   }
   .home-tiles-2{
-    padding-top: 100px;
+    padding-top: 80px;
     padding-bottom:80px ;
   }
+  .home-tiles-2 p{
+    height: auto;
+    font-size: 0.8em;
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
   .nav-tile > span{
-    font-size: 2.5vw;
+    font-size: 2.7em;
   }
   .tile-icon{
     height: 85%;
@@ -432,9 +435,7 @@ a{
     text-align: center;
     font-size: 1.4em;
   }
-  .carousel-item{
-    height: 15rem;
-  }
+
   #logo-img{
 
     width: 40px;
