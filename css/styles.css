@@ -32,7 +32,9 @@ a{
   width:fit-content;
   left: 2%;
 }
-
+.facebook-and-instagram{
+  justify-content: end;
+}
 .navbar-brand{ 
   position: relative;
   vertical-align: middle;
@@ -224,7 +226,7 @@ a{
   right: 0px;
 }
 .social-icon{
-  width: 50px;
+  width: 80px;
   margin-left: 20px;
   margin-right: 20px;
   margin-top:20px
@@ -466,5 +468,10 @@ a{
   .home-tiles-2 .tile-icon{
     height: 100%;
   }
-  /* Header */
+  .facebook-and-instagram{
+    justify-content: center;
+  }
+  .twitter-and-whatsapp{
+    justify-content: center;
+  }
 }
