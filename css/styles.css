@@ -139,6 +139,8 @@ a{
   font-weight: 400;
 }
 .home-tiles-2 .nav-tile{
+  width: 19vw;
+  height: 19vw;
   color: #7972D3;
   border-radius: 50%;
 
@@ -184,8 +186,8 @@ a{
 .nav-tile{
   border-radius: 25%;
   padding: 10%;
-  width: 18.5vw;
-  height: 19vw;
+  width: 15vw;
+  height: 15vw;
   margin: auto;
   margin-top: 40px; 
   text-align: center;
@@ -228,13 +230,29 @@ a{
   right: 0px;
 }
 .social-icon{
-  width: 80px;
+  width: 60px;
   margin-left: 20px;
   margin-right: 20px;
-  margin-top:20px
+  margin: top 10px;
+  transition:transform 150ms ease-in;
 }
-.social-icon .cls-1{fill:#fff;}
-.social-icon .cls-2{fill:#61a3aa;}
+.social-icon .cls-1{
+  fill:#fff;
+  transition: fill 120ms ease-in;
+}
+.social-icon .cls-2{
+  fill:#61a3aa;
+  transition: fill 120ms ease-out;
+}
+.social-icon:hover .cls-1{
+  fill: #444;
+}
+.social-icon:hover{
+  transform: scale(0.95);
+}
+.social-icon:hover .cls-2{
+  fill: #3ca78e;
+}
 /********** xl only **********/
 @media (min-width: 1200px) {
 
@@ -322,12 +340,19 @@ a{
   }
   .nav-tile{
     margin: auto;
-    width: 42vw;
-    height: 30vw;
+    width: 35vw;
+    height: 25vw;
     border-radius: 20em;
   }
+  .home-tiles-2 .nav-tile{
+    width: 42vw;
+    height: 42vw;
+  }
   .nav-tile > span{
-    font-size: 2.5vw;
+    font-size: 2.3vw;
+  }
+  .home-tiles-2 .nav-tile > span{
+    font-size: 2.6em;
   }
 
   .about-text{
@@ -384,7 +409,8 @@ a{
     padding-bottom:80px ;
   }
   .home-tiles-2 .nav-tile{
-    height:auto;
+    width: 42vw;
+    height: 42vw;
   
   }
   .home-tiles-2{
@@ -397,16 +423,19 @@ a{
     margin-top: 10px;
     margin-bottom: 25px;
   }
+  .home-tiles-2 .nav-tile > span{
+    font-size: 2.3em;
+  }
   .nav-tile > span{
-    font-size: 2.7em;
+    font-size: 1.6em;
   }
   .tile-icon{
     height: 85%;
   }
   .nav-tile{
     margin: auto;
-    width: 42vw;
-    height: 30vw;
+    width: 35vw;
+    height: 25vw;
     border-radius: 20em;
   }
   .about-text{
@@ -467,7 +496,7 @@ a{
     height: 30px;
   }
   .home-tiles-2 .tile-icon{
-    height: 100%;
+    width: 100%;
   }
   .facebook-and-instagram{
     justify-content: center;
