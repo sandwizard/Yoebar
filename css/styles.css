@@ -11,9 +11,11 @@ a{
 }
 #logo-img{
   background: url('../img/logo.svg') no-repeat;
-  width: 60px;
-  height: 60px;
-  background-size: 60px 60px;
+  width: 80px;
+  height: 80px;
+  background-size: 80px 80px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 #building-img{
   width: 100%;
@@ -280,6 +282,9 @@ a{
     font-size: 0.9vw;
     margin-bottom: 1.6em;
   }
+  .nav-link{
+    font-size: 1em;
+  }
 
 }
 
@@ -288,20 +293,29 @@ a{
   /* Header */
 
   .navbar-brand{
-    font-size: 1.1em;
+    font-size: 1em;
+    left: 5%;
   }
   
-  
+
   .home-tiles-2 .nav-tile > span{
     font-size: 1.15vw;
     margin-bottom: 1.6em;
   }
 
+  .nav-link{
+    font-size: 0.9em;
+  }
   /* End Header */
 }
 
 /********** md devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
+  #logo-img{
+    width: 60px;
+    height: 60px;
+    background-size: 60px 60px;
+  }
   .nav-tile{
     margin: auto;
     width: 41vw;
@@ -365,6 +379,11 @@ a{
 
 /********** sm  devices only **********/
 @media (min-width: 576px) and (max-width: 767px) {
+  #logo-img{
+    width: 60px;
+    height: 60px;
+    background-size: 60px 60px;
+  }
   .home-tiles-2 .nav-tile{
     height:auto ;
   
@@ -558,5 +577,19 @@ a{
   .nav-tile > span{
     font-size: 3vw;
     margin-bottom: 0.7em;
+  }
+}
+/* for new galaxy fold  phones */
+@media (max-width: 320px){
+  #logo-img{
+    width: 35px;
+    height: 35px;
+    background-size: 35px 35px;
+  }
+  .nav-icon{
+    height:25px;
+  }
+  #cart-icon{
+    height: 25px;
   }
 }
