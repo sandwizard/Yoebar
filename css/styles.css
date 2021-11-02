@@ -234,10 +234,7 @@ a{
   padding-top: 80px;
   background-color: #61A3AA;
 }
-.facebook-and-twitter{
-  position: absolute;
-  right: 0px;
-}
+
 .social-icon{
   width: 60px;
   margin-left: 20px;
@@ -295,11 +292,15 @@ a{
 @media (min-width: 768px) and (max-width: 991px) {
   .nav-tile{
     margin: auto;
-    width: 42vw;
-    height: 30vw;
+    width: 41vw;
+    height: 32vw;
     border-radius: 20em;
   }
+  .nav-tile > span{
+    font-size: 2.1vw;
+    margin-bottom: 1em;
 
+  }
   .home-tiles{
     padding-top: 200px;
     padding-bottom:100px ;
@@ -365,16 +366,18 @@ a{
 
   .nav-tile{
     margin: auto;
-    width: 40vw;
-    height: 27vw;
+    width: 46vw;
+    height: 34vw;
     border-radius: 20em;
   }
+
   .home-tiles-2 .nav-tile{
     width: 42vw;
     height: 42vw;
   }
   .nav-tile > span{
-    font-size: 2.6vw;
+    font-size: 2.4vw;
+    margin-bottom: 0.6em;
   }
   .home-tiles-2 .nav-tile > span{
     font-size: 2.6em;
@@ -455,8 +458,8 @@ a{
  
   .nav-tile{
     margin: auto;
-    width: 42vw;
-    height: 30vw;
+    width: 46vw;
+    height: 34vw;
     border-radius: 20em;
   }
   .about-text{
@@ -522,6 +525,7 @@ a{
   }
   .twitter-and-whatsapp{
     justify-content: center;
+    padding: 0;
   }
   .social-icon{
     width: 50px;
@@ -533,7 +537,7 @@ a{
     height: 60%;
   }
   .nav-tile > span{
-    font-size: 2em;
+    font-size: 2.5vw;
     margin-bottom: 0.8em;
   }
 }
