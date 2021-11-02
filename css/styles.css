@@ -201,6 +201,53 @@ a{
   font-weight: 900;
   color:#72D6BF;
   background-color: white;
+  overflow: hidden;
+}
+.home-tiles-2 .nav-tile::after{
+  content: "";
+  width: 450%;
+  height: 450%;
+  position: absolute;
+  top:110%;
+  left:50%;
+  transform: translateX(-50%);
+  border-radius: 45%;
+  opacity: 50%;
+  background-color: #61A3AA;
+  transition: top 400ms ease-in;
+
+}
+.home-tiles-2 .nav-tile::before{
+  content: "";
+  width: 450%;
+  height: 450%;
+  position: absolute;
+  top:110%;
+  left:50%;
+  opacity: 30%;
+  transform: translateX(-50%);
+  border-radius: 40%;
+  background-color:#61A3AA;
+  transition: top 400ms linear;
+
+}
+
+
+.home-tiles-2 .nav-tile:hover::after{
+  animation: spin 7s linear infinite;
+  top: 65%
+}
+.home-tiles-2 .nav-tile:hover::before{
+  animation: spin 11s linear infinite;
+  top: 65%
+}
+@keyframes spin{
+  0%{
+    transform:translate(-50%) rotate(0deg);
+  }
+  100%{
+    transform:translate(-50%) rotate(400deg);
+  }
 }
 
 .nav-tile > span{
@@ -222,6 +269,7 @@ a{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1;
 
 }
 .home-tiles-2 .tile-icon{
