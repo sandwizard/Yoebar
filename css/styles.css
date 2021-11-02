@@ -34,6 +34,7 @@ a{
 }
 .facebook-and-instagram{
   justify-content: end;
+  padding-right: 0;
 }
 .navbar-brand{ 
   position: relative;
@@ -255,9 +256,21 @@ a{
 }
 /********** xl only **********/
 @media (min-width: 1200px) {
-
+  .nav-tile{
+    width:13vw ;
+    height: 13vw;
+  }
+  .nav-tile > span{
+    font-size: 0.7em;
+  }
+  .home-tiles-2 .nav-tile {
+    width: 14vw;
+    height: 14vw;
+  }
+  .home-tiles-2 .nav-tile > span{
+    font-size: 0.7em;
+  }
 }
-
 
 /********** lg only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
