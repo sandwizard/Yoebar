@@ -124,7 +124,6 @@ a{
 }
 .home-tiles p{
   font-size: 1.4em;
-  height: 200px;
   margin-top: 40px;
   text-align: center;
 }
@@ -185,6 +184,10 @@ a{
   background-color: #72D6BF;
 }
 .nav-tile{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 25%;
   padding: 10%;
   width: 17vw;
@@ -197,24 +200,29 @@ a{
   color:#72D6BF;
   background-color: white;
 }
+
 .nav-tile > span{
-  margin-top: 10px;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform:translateX(-50%);
+  margin-bottom: 1.3em;
+  
 
 }
 
 
 .tile-icon{
-  margin-top:1vw;
-  margin-bottom:1vw;
   fill: #72D6BF;
-  width:75%;
   margin-left: auto;
   margin-right: auto;
-  vertical-align: baseline;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
 }
 .home-tiles-2 .tile-icon{
-  width: 100%;
   fill: #7972D3;
 }
 #main-content{
@@ -285,6 +293,13 @@ a{
 
 /********** md devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
+  .nav-tile{
+    margin: auto;
+    width: 42vw;
+    height: 30vw;
+    border-radius: 20em;
+  }
+
   .home-tiles{
     padding-top: 200px;
     padding-bottom:100px ;
@@ -347,10 +362,7 @@ a{
     padding-bottom: 80px;
   }
   
-  .tile-icon{
-    margin-top: 0;
-    height: 85%;
-  }
+
   .nav-tile{
     margin: auto;
     width: 40vw;
@@ -439,12 +451,8 @@ a{
   .home-tiles-2 .nav-tile > span{
     font-size: 2.3em;
   }
-  .nav-tile > span{
-    font-size: 2.3em;
-  }
-  .tile-icon{
-    height: 85%;
-  }
+
+ 
   .nav-tile{
     margin: auto;
     width: 42vw;
@@ -508,9 +516,7 @@ a{
   .nav-icon{
     height: 30px;
   }
-  .home-tiles-2 .tile-icon{
-    width: 100%;
-  }
+ 
   .facebook-and-instagram{
     justify-content: center;
   }
@@ -522,5 +528,12 @@ a{
     margin-left: 20px;
     margin-right: 20px;
     margin-top:20px
+  }
+  .tile-icon{
+    height: 60%;
+  }
+  .nav-tile > span{
+    font-size: 2em;
+    margin-bottom: 0.8em;
   }
 }
