@@ -56,7 +56,7 @@ a{
   font-weight: 600;
   letter-spacing: 0.04em;
   font-size: 0.75em;
-  text-align: center;  
+  text-align: center;
 }
 .nav-icon{
   fill: #fff;
@@ -212,8 +212,8 @@ a{
   left:50%;
   transform: translateX(-50%);
   border-radius: 45%;
-  opacity: 50%;
-  background-color: #61A3AA;
+
+  background-color: #1e1d30;
   transition: top 400ms ease-in;
 
 }
@@ -224,10 +224,10 @@ a{
   position: absolute;
   top:110%;
   left:50%;
-  opacity: 30%;
+
   transform: translateX(-50%);
-  border-radius: 40%;
-  background-color:#61A3AA;
+  border-radius: 43%;
+  background-color:#4e4c69;
   transition: top 400ms linear;
 
 }
@@ -235,11 +235,17 @@ a{
 
 .home-tiles-2 .nav-tile:hover::after{
   animation: spin 7s linear infinite;
-  top: 65%
+  top: 55%
+}
+.home-tiles-2 .nav-tile:focus::after{
+  top: -100%;
 }
 .home-tiles-2 .nav-tile:hover::before{
   animation: spin 11s linear infinite;
-  top: 65%
+  top: 55%
+}
+.home-tiles-2 .nav-tile:focus::before{
+  top:-100%;
 }
 @keyframes spin{
   0%{
@@ -256,6 +262,7 @@ a{
   left: 50%;
   transform:translateX(-50%);
   margin-bottom: 1.3em;
+  z-index: 1;
   
 
 }
@@ -331,7 +338,7 @@ a{
     margin-bottom: 1.6em;
   }
   .nav-link{
-    font-size: 1em;
+    font-size: 1.2em;
   }
 
 }
@@ -596,7 +603,7 @@ a{
   #cart-icon{
     height: 30px;
   }
- 
+  
   .nav-link{
     font-size:0.4em ;
     padding-left:5px;
