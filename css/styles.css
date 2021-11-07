@@ -1,13 +1,79 @@
 body {
   font-size: 16px;
-  color: #fff;
+  color: #312d2d;
   font-family: 'Open Sans', sans-serif;
+}
+.load-wrapper{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  color: #2B2B2B;
+  letter-spacing: 1em;
+}
+#loading {
+  position:relative;
+  height:300px;  
+  animation:body-run 1.5s ease-out infinite;
+  z-index:1;
+  
+}
+/**/
+
+
+.shadow{
+  display: block;
+  position:relative;
+  border-radius:50%;
+  bottom: 45px;
+  width:80px;
+  height:10px;
+  background-color:grey;
+  animation:shadow 1.5s ease-out infinite;
+} 
+
+
+
+
+@keyframes body-run{
+  0%,100%{
+    transform:translateY(0%);
+  }
+ 50%{
+    
+    transform:translateY(10%);  
+  }  
+}
+@keyframes shadow{
+  0%,100%{
+    transform:scale(1);
+  }
+ 50%{
+    
+    transform:scale(0.4);  
+  }  
 }
 a{
   text-decoration: none;
 }
 #header-nav{
   background-color: #333333; 
+}
+.comming-soon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  color: #2B2B2B;
+
+}
+#main-content{
+  padding: 0;
+  color: white;
 }
 #logo-img{
   background: url('../img/logo.svg') no-repeat;
@@ -57,19 +123,34 @@ a{
   letter-spacing: 0.04em;
   font-size: 0.75em;
   text-align: center;
+  
 }
 .nav-icon{
   fill: #fff;
   height: 45px;
   margin: auto;
   margin-bottom: 0.3em;
+  transition: scale 150ms ease-in,
+              color 200ms ease-in;
+}
+.nav-link:active .nav-icon{
+  fill: #3ca78e;
+  transform:scale(1.1) ;
+}
+.nav-link:active{
+  transform:scale(1.1) ;
 }
 .nav-link:hover,.nav-link:focus{
-  color: #999;
+  color: #3ca78e;
 }
 .nav-link:hover svg,.nav-link:focus svg{
-  fill: #999;
+  fill: #3ca78e;
 }
+.nav-link:focus #products-icon .cls-2 ,.nav-link:active #products-icon svg{
+  fill: #3ca78e;
+}
+
+
 #products-icon .cls-2{
   fill: #999;
 }
@@ -109,10 +190,12 @@ a{
   padding-left: 8%;
 }
 .home-tiles-2{
+  position: relative;
   padding-top: 300px;
-  padding-bottom: 300px;
+  padding-bottom: 0px;
   background-color: #7972D3;
 }
+
 .open-hours{
   width: 387px;
   margin:auto ;
@@ -145,6 +228,7 @@ a{
   height: 19vw;
   color: #7972D3;
   border-radius: 50%;
+  overflow: hidden;
 
 }
 .home-tiles-2 p{
@@ -201,8 +285,24 @@ a{
   font-weight: 900;
   color:#72D6BF;
   background-color: white;
-  overflow: hidden;
+  box-shadow: 3px 5px 10px rgba(0,0,0,0.2);
+
 }
+
+.anim-explode{
+  position: absolute;
+	width: 200%;
+	height: 200%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  z-index:0;
+}
+
+.nav-tile:hover{
+  box-shadow: 0px 0px 9px rgba(0,0,0,0.4);
+}
+
 .home-tiles-2 .nav-tile::after{
   content: "";
   width: 450%;
@@ -262,12 +362,18 @@ a{
   left: 50%;
   transform:translateX(-50%);
   margin-bottom: 1.3em;
-  z-index: 1;
+
   
 
 }
 
-
+.home-tiles-2 span{
+  z-index: 1;
+  
+}
+.home-tiles-2 .tile-icon{
+  z-index: 1;
+}
 .tile-icon{
   fill: #72D6BF;
   margin-left: auto;
@@ -276,15 +382,11 @@ a{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
+  
 
 }
 .home-tiles-2 .tile-icon{
   fill: #7972D3;
-}
-#main-content{
-  padding-left: 10px;
-  padding-right: 10px;
 }
 .panel-footer{
   height: 400px;
@@ -298,6 +400,8 @@ a{
   margin-right: 20px;
   margin: top 10px;
   transition:transform 150ms ease-in;
+  border-radius: 50%;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.13);
 }
 .social-icon .cls-1{
   fill:#fff;
@@ -322,6 +426,7 @@ a{
 
 /********** xl only **********/
 @media (min-width: 1200px) {
+
   .nav-tile{
     width:13vw ;
     height: 13vw;
@@ -346,12 +451,14 @@ a{
 /********** lg only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
   /* Header */
-
+ 
   .navbar-brand{
-    font-size: 1em;
     left: 5%;
   }
-  
+  .navbar-brand{
+    left: 5%;
+    font-size: 1.1em;
+  }
 
   .home-tiles-2 .nav-tile > span{
     font-size: 1.15vw;
@@ -366,6 +473,7 @@ a{
 
 /********** md devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
+  
   #logo-img{
     width: 60px;
     height: 60px;
@@ -434,6 +542,9 @@ a{
 
 /********** sm  devices only **********/
 @media (min-width: 576px) and (max-width: 767px) {
+ 
+
+ 
   #logo-img{
     width: 60px;
     height: 60px;
@@ -519,6 +630,25 @@ a{
 }
   /* End Header */
 @media (max-width: 575px) {
+  
+  #loading {
+    height:200px;  
+    animation:body-run 1.5s ease-out infinite;
+    z-index:1;
+    
+  }
+  
+.shadow{
+
+  bottom: 30px;
+  width:60px;
+  height:6px;
+
+} 
+
+  .loading-container h2{
+    font-size: 1.1em;
+  }
   .home-tiles p{
     margin-top: 0.8em;
     font-size: 0.6em;
