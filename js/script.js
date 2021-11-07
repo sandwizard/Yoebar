@@ -57,7 +57,7 @@
 
   //gentel hover 
   yoebar.gentleHover = function (container) {
-    let svg = container.querySelector(".anim-explode");
+    let svg = container.nextElementSibling;
     let animatedShapes = [];
     for (var i = 0; i < numberOfShapes; i++) {
       
@@ -83,7 +83,7 @@
     };
     gsap.set(animatedShapes, {
       transformOrigin: "center",
-      scale: "random(0.8, 2)"
+      scale: "random(0.3, 2)"
     });
   
     gsap.to(animatedShapes, {
