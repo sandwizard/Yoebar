@@ -61,7 +61,8 @@ a{
   text-decoration: none;
 }
 #header-nav{
-  background-color: #333333; 
+  background-color:#2F323A;
+  color:white; 
 }
 .comming-soon{
   display: flex;
@@ -105,6 +106,7 @@ a{
   padding-right: 0;
 }
 .navbar-brand{ 
+  color: white;
   position: relative;
   vertical-align: middle;
   left: 10%;
@@ -162,7 +164,7 @@ a{
   flex-wrap: nowrap;
 }
 .carousel-item{
-  height: 60vw;
+  height: 35vw;
   background:#777;
   position: relative; 
   background-position: center;
@@ -170,14 +172,16 @@ a{
 }
 .intro{
   padding-top: 200px;
-  background-color: #E27B60;
+  background-color: #2F323A;
   padding-bottom: 200px;
+  color: #F5C396;
 
 }
 .vr{
   margin:0 auto;
-  color: #2B2B2B;
-  padding: 1px;
+  color: #ffffff;
+  padding: 3px;
+  border-radius: 10px;
 
 }
 .about-text h1{
@@ -185,15 +189,14 @@ a{
 }
 .about-text > p{
   font-style: oblique;
-  color:#444;
   font-weight: bold;
   padding-left: 8%;
 }
 .home-tiles-2{
   position: relative;
-  padding-top: 300px;
+  padding-top: 200px;
   padding-bottom: 0px;
-  background-color: #7972D3;
+  background-color: #9395D3;
 }
 
 .open-hours{
@@ -229,7 +232,8 @@ a{
 .home-tiles-2 .nav-tile{
   width: 19vw;
   height: 19vw;
-  color: #7972D3;
+  color: #2F323A;
+  background-color: white;
   border-radius: 50%;
   overflow: hidden;
 
@@ -243,7 +247,6 @@ a{
 }
 /* 9 and 8 in open hrs*/
 .open-hours span:nth-child(3){
-  color: #844138;
   text-align: end;
   font-size: 2.5em;
   bottom: 20px;
@@ -286,7 +289,7 @@ a{
   text-align: center;
   font-size: 1.3vw;
   font-weight: 900;
-  color:#72D6BF;
+  color:#2F323A;
   background-color: white;
   box-shadow: 3px 5px 10px rgba(0,0,0,0.2);
   z-index: 1;
@@ -304,8 +307,12 @@ a{
 
 }
 
-.nav-tile:hover{
+.nav-tile:hover,.nav-tile:focus{
   box-shadow: 0px 0px 9px rgba(0,0,0,0.4);
+  color: #2F323A;
+}
+.home-tiles-2 .nav-tile:hover,.home-tiles-2 .nav-tile:focus{
+  color:#2F323A;
 }
 
 .home-tiles-2 .nav-tile::after{
@@ -317,8 +324,7 @@ a{
   left:50%;
   transform: translateX(-50%);
   border-radius: 45%;
-
-  background-color: #1e1d30;
+  background-color:#F5C396;
   transition: top 400ms ease-in;
 
 }
@@ -332,7 +338,7 @@ a{
 
   transform: translateX(-50%);
   border-radius: 43%;
-  background-color:#4e4c69;
+  background-color:#fae3cf;
   transition: top 400ms linear;
 
 }
@@ -377,10 +383,11 @@ a{
   
 }
 .home-tiles-2 .tile-icon{
+  fill: #2F323A;
   z-index: 1;
 }
 .tile-icon{
-  fill: #72D6BF;
+  fill: #2F323A;
   margin-left: auto;
   margin-right: auto;
   position: absolute;
@@ -390,13 +397,10 @@ a{
   
 
 }
-.home-tiles-2 .tile-icon{
-  fill: #7972D3;
-}
 .panel-footer{
   height: 400px;
   padding-top: 80px;
-  background-color: #61A3AA;
+  background-color: #2F323A;
 }
 
 .social-icon{
@@ -406,14 +410,14 @@ a{
   margin: top 10px;
   transition:transform 150ms ease-in;
   border-radius: 50%;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
 }
 .social-icon .cls-1{
   fill:#fff;
   transition: fill 120ms ease-in;
 }
 .social-icon .cls-2{
-  fill:#61a3aa;
+  fill:#2F323A;
   transition: fill 120ms ease-out;
 }
 .social-icon:hover .cls-1{

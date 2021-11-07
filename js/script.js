@@ -68,10 +68,10 @@
       newElement.setAttribute("d", gsap.utils.random(shapes));
 		  newElement.style.fill = gsap.utils.random([
       // change colours
-			"#8EF6E4",
-			"#A2D5F2",
-			"#D59BF6",
-			"#EDB1F1"
+			"#B3B7EE",
+			"#9395D3",
+			"#F5C396",
+			"#2F323A"
 		]);
     svg.appendChild(newElement);
 		animatedShapes.push(newElement);
@@ -83,7 +83,7 @@
     };
     gsap.set(animatedShapes, {
       transformOrigin: "center",
-      scale: "random(0.3, 2)"
+      scale: "random(0.4, 1.4)"
     });
   
     gsap.to(animatedShapes, {
@@ -112,7 +112,7 @@
 
     
   
-
+  
   
   
  
