@@ -45,6 +45,7 @@ body {
 }
 .home-graphic{
   width: 30vw;
+  height: auto;
 }
 #paints-section{
   flex-direction: row-reverse;
