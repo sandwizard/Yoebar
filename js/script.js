@@ -83,7 +83,7 @@
     };
     gsap.set(animatedShapes, {
       transformOrigin: "center",
-      scale: "random(0.4, 1.4)"
+      scale: "random(0.5, 1.3)"
     });
   
     gsap.to(animatedShapes, {
