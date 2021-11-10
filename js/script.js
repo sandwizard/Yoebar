@@ -13,15 +13,24 @@
 
   // On page load (before images or CSS)
   document.addEventListener("DOMContentLoaded", function (event) {
-    showLoading("#main-content");
-    $ajaxUtils.sendGetRequest(
-      homeHtml,
-      function (responseText) {
-        document.querySelector("#main-content")
-          .innerHTML = responseText;
-      },
-      false);
+    yoebar.loadHome();
+    
   });
+
+  yoebar.loadHome =function () {
+    if(document.querySelector(".home") == null){
+      showLoading("#main-content");
+      $ajaxUtils.sendGetRequest(
+        homeHtml,
+        function (responseText) {
+          document.querySelector("#main-content")
+            .innerHTML = responseText;
+        },
+        false);
+
+    }
+    
+  };
 
 
   // Show loading icon inside element identified by 'selector'.
@@ -31,15 +40,18 @@
     insertHtml(selector, html);
   };
 
-
   //comming soon ajax load
   yoebar.loadCommingSoon = function () {
-    showLoading("#main-content");
-    $ajaxUtils.sendGetRequest(commingSoomHtml,
+    if(document.querySelector(".comming-soon") == null){
+      showLoading("#main-content");
+      $ajaxUtils.sendGetRequest(commingSoomHtml,
       function (responseText) {
         document.querySelector("#main-content").innerHTML = responseText
 
       }, false);
+
+    }
+    
 
   };
 

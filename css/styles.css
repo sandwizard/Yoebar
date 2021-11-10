@@ -3,6 +3,20 @@ body {
   color: #312d2d;
   font-family: 'Roboto', sans-serif
 }
+.carousel-control-prev{
+  width: 40%;
+}
+.carousel-control-next{
+  width: 40%;
+}
+.carousel-control-prev-icon{
+  position: absolute;
+  left: 13%;
+}
+.carousel-control-next-icon{
+  position: absolute;
+  right: 13%;
+}
 .load-wrapper{
   width: 100%;
   height: 100%;
@@ -246,6 +260,7 @@ a{
 
 }
 .home-tiles{
+  position: relative;
   padding-top: 30vh;
   padding-bottom:30vh;
 }
@@ -253,10 +268,11 @@ a{
   content: "";
   position: absolute;
   left:50%;
+  top: 50%;
   width: 100vw;
-  height: 65%;
+  height: 60%;
   background-color: #72D6BF;
-  transform: translateX(-50%) skewY(6deg);;
+  transform: translate(-50%,-50%) skewY(6deg);;
 }
 .tile-container{
   position:relative;
@@ -552,6 +568,10 @@ a{
   .home-graphic{
     width: 35vw;
   }
+  .home-tiles::before{
+    height: 65%;
+    transform: translate(-50%,-50%) skewY(10deg);;
+}
   #logo-img{
     width: 60px;
     height: 60px;
@@ -713,6 +733,10 @@ a{
 }
   /* xs device End Header */
 @media (max-width: 575px) {
+  .home-tiles::before{
+    height: 40%;
+    transform: translate(-50%,-50%) skewY(30deg);;
+  }
   
   .carousel-item{
     height: 50vh;
