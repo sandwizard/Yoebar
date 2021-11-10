@@ -1,7 +1,7 @@
 body {
   font-size: 16px;
   color: #312d2d;
-  font-family: 'Roboto', sans-serif
+  font-family: 'Roboto', sans-serif;
 }
 .carousel-control-prev{
   width: 40%;
@@ -51,6 +51,7 @@ body {
 /* graphic sections home start*/
 .content-section{
   display: flex;
+  flex-wrap: wrap;
   margin-top: 19vh;
   margin-bottom: 40vh;
 
@@ -67,6 +68,9 @@ body {
   width: 30vw;
 }
 #paints-section{
+
+ 
+
   flex-direction: row-reverse;
 }
 
@@ -731,12 +735,32 @@ a{
     margin: 0;
   }
   .home-tiles::before{
-    height: 40%;
-    transform: translate(-50%,-50%) skewY(30deg);;
+    height: 85%;
+    transform: translate(-50%,-50%) skewY(15deg);;
+  }
+  .home-graphic{
+    width: 45vw;
+  }
+  .content-section p{
+    width: 100%;
   }
 }
   /* xs device End Header */
 @media (max-width: 575px) {
+  body {
+    font-weight: 500
+  }
+  .intro,.home-tiles ,.home-tiles-2,.content-section{
+    padding-left: 9vw;
+    padding-right: 9vw;
+  }
+ 
+  .home-graphic{
+    width: 50vw;
+  }
+  .content-section p{
+    width: 100%;
+  }
   .home-tiles::before{
     height: 85%;
     transform: translate(-50%,-50%) skewY(15deg);;
@@ -765,7 +789,7 @@ a{
   }
   .home-tiles p{
     margin-top: 0.8em;
-    font-size: 0.6em;
+    font-size: 0.8em;
     height: auto;
   }
   .home-tiles{
