@@ -22,7 +22,13 @@ body {
   z-index:1;
   
 }
-
+.fade-in{
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+.appear{
+  opacity: 1;
+}
 /* padding-land r for all */
 .intro,.home-tiles ,.home-tiles-2,.content-section{
   padding-left: 6vw;
@@ -105,9 +111,9 @@ a{
 }
 #logo-img{
   background: url('../img/logo.svg') no-repeat;
-  width: 80px;
-  height: 80px;
-  background-size: 80px 80px;
+  width: 70px;
+  height: 70px;
+  background-size: 70px 70px;
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -142,7 +148,10 @@ a{
   letter-spacing: 0.5em;
   font-weight: 900;
 }
+.navbar-brand:hover ,.navbar-brand:focus{
+  color: white;
 
+}
 
 
 .nav-link{
@@ -191,7 +200,7 @@ a{
   flex-wrap: nowrap;
 }
 .carousel-item{
-  height: 73vh;
+  height: 80vh;
   background:#777;
   position: relative; 
   background-position: center;
@@ -257,9 +266,10 @@ a{
   height: 1000px;
 }
 .home-tiles p{
+  position: relative;
   margin: auto;
+
   margin-top: 1em;
-  z-index: 2;
   font-size: 1.05em;
   text-align: center;  
 }
@@ -498,7 +508,7 @@ a{
     margin-bottom: 1.6em;
   }
   .nav-link{
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
 }
@@ -818,7 +828,7 @@ a{
   .nav-icon{
     height: 30px;
   }
- 
+  
   .facebook-and-instagram{
     justify-content: center;
   }
