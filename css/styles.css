@@ -1,7 +1,9 @@
+html, body {width: auto!important; overflow-x: hidden!important} 
 body {
   font-size: 16px;
   color: #312d2d;
   font-family: 'Roboto', sans-serif;
+  
 }
 .carousel-control-prev{
   width: 40%;
