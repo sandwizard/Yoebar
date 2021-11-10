@@ -730,6 +730,10 @@ a{
   .open-hours{
     margin: 0;
   }
+  .home-tiles::before{
+    height: 40%;
+    transform: translate(-50%,-50%) skewY(30deg);;
+  }
 }
   /* xs device End Header */
 @media (max-width: 575px) {
