@@ -747,9 +747,7 @@ a{
 }
   /* xs device End Header */
 @media (max-width: 575px) {
-  body {
-    font-weight: 500
-  }
+
   .intro,.home-tiles ,.home-tiles-2,.content-section{
     padding-left: 9vw;
     padding-right: 9vw;
