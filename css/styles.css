@@ -738,8 +738,8 @@ a{
   /* xs device End Header */
 @media (max-width: 575px) {
   .home-tiles::before{
-    height: 40%;
-    transform: translate(-50%,-50%) skewY(30deg);;
+    height: 85%;
+    transform: translate(-50%,-50%) skewY(15deg);;
   }
   
   .carousel-item{
