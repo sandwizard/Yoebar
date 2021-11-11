@@ -5,6 +5,19 @@
   var homeHtml = "snippets/home-snippet.html";
   var commingSoomHtml = "snippets/comming-soon.html";
   
+  // hide nav on scroll//
+  var prevScrollpos = global.pageYOffset;
+  global.onscroll = function() {
+  var currentScrollPos = global.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("header-nav").classList.add("navbar-appear");
+    document.getElementById("header-nav").classList.remove("navbar-dissappear");
+  } else {
+    document.getElementById("header-nav").classList.add("navbar-dissappear");
+    document.getElementById("header-nav").classList.remove("navbar-appear");
+  }
+  prevScrollpos = currentScrollPos;
+}
   // Convenience function for inserting innerHTML for 'select'
   var insertHtml = function (selector, html) {
     var targetElem = document.querySelector(selector);

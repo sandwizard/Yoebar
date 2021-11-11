@@ -8,12 +8,7 @@ body {
 .carousel-control-prev{
   width: 40%;
 }
-header{
-  position: fixed;
-  width: 100vw;
-  z-index: 999;
-  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
-}
+
 .carousel-control-next{
   width: 40%;
 }
@@ -119,10 +114,25 @@ header{
 a{
   text-decoration: none;
 }
+header{
+  position: relative;
+}
 #header-nav{
   background-color:#2F323A;
   color:white; 
+  position: fixed;
+  width: 100vw;
+  z-index: 999;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+  transition: all 300ms ease-in-out;
 }
+.navbar-appear{
+  top: 0;
+}
+.navbar-dissappear{
+  top:-75px;
+}
+
 .comming-soon{
   display: flex;
   justify-content: center;
@@ -137,12 +147,13 @@ a{
 }
 #logo-img{
   background: url('../img/logo.svg') no-repeat;
-  width: 50px;
-  height: 50px;
-  background-size: 50px 50px;
+  width: 45px;
+  height: 45px;
+  background-size: 45px 45px;
   margin-top: 5px;
   margin-bottom: 5px;
 }
+
 #location-img{
   width: 100%;
   height: inherit;
@@ -536,7 +547,10 @@ a{
     margin-bottom: 1.6em;
   }
   .nav-link{
-    font-size: 1em;
+    font-size: 0.8em;
+  }
+  .nav-icon{
+    height: 2.5em;
   }
 
 }
@@ -584,11 +598,7 @@ a{
     height: 65%;
     transform: translate(-50%,-50%) skewY(10deg);;
 }
-  #logo-img{
-    width: 60px;
-    height: 60px;
-    background-size: 60px 60px;
-  }
+
   .nav-tile{
     margin: auto;
     width: 29vw;
@@ -650,21 +660,33 @@ a{
   #cart-icon{
     height: 45px;
   }
-}
-
-
-/********** sm  devices only **********/
-@media (min-width: 576px) and (max-width: 767px) {
- 
-  .carousel-item{
-    height: 50vw;
-  }
- 
   #logo-img{
     width: 60px;
     height: 60px;
     background-size: 60px 60px;
   }
+  .navbar-dissappear{
+    top:-90px;
+  }
+}
+
+
+/********** sm  devices only **********/
+@media (min-width: 576px) and (max-width: 767px) {
+  #logo-img{
+    width: 55px;
+    height: 55px;
+    background-size: 55px 55px;
+  }
+  .navbar-dissappear{
+    top:-80px;
+  }
+ 
+  .carousel-item{
+    height: 50vw;
+  }
+ 
+
   .home-tiles-2 .nav-tile{
     height:auto ;
   
@@ -862,6 +884,7 @@ a{
     height: 40px;
     background-size: 40px 40px;
   }
+ 
   #header-nav .container-fluid{
     padding-left: 5px;
     padding-right: 5px;
