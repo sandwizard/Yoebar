@@ -4,7 +4,8 @@
 
   var homeHtml = "snippets/home-snippet.html";
   var commingSoomHtml = "snippets/comming-soon.html";
-  
+  const nav_tabs = document.querySelectorAll(".nav-link");
+  console.log(nav_tabs);
   // hide nav on scroll//
   var prevScrollpos = global.pageYOffset;
   global.onscroll = function() {
@@ -26,12 +27,19 @@
 
   // On page load (before images or CSS)
   document.addEventListener("DOMContentLoaded", function (event) {
-    yoebar.loadHome();
+    yoebar.loadHomePage();
     
   });
-
-  yoebar.loadHome =function () {
+// helper function to remove active class from all nav tabs
+  yoebar.remove_active_from_all_nav=function () {
+    nav_tabs.forEach(Element=>{
+    Element.classList.remove("active-nav")});  
+  }
+  //load home snippet
+  yoebar.loadHomePage =function () {
     if(document.querySelector(".home") == null){
+      yoebar.remove_active_from_all_nav();
+      document.querySelector("#home-nav").classList.add("active-nav");
       showLoading("#main-content");
       $ajaxUtils.sendGetRequest(
         homeHtml,
@@ -44,7 +52,17 @@
     }
     
   };
-
+  // load products page
+  yoebar.loadProductsPage =function () {
+    yoebar.remove_active_from_all_nav();
+    document.querySelector("#products-nav").classList.add("active-nav");
+    yoebar.loadCommingSoonPage();
+  }
+  yoebar.loadCartPage =function () {
+    document.querySelector("#cart-nav").classList.add("active-nav");
+    yoebar.remove_active_from_all_nav();
+    yoebar.loadCommingSoonPage();
+  }
 
   // Show loading icon inside element identified by 'selector'.
   var showLoading = function (selector) {
@@ -54,7 +72,7 @@
   };
 
   //comming soon ajax load
-  yoebar.loadCommingSoon = function () {
+  yoebar.loadCommingSoonPage = function () {
     if(document.querySelector(".comming-soon") == null){
       showLoading("#main-content");
       $ajaxUtils.sendGetRequest(commingSoomHtml,

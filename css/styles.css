@@ -209,20 +209,20 @@ header{
               color 200ms ease-in;
 }
 .nav-link:active .nav-icon{
-  fill: #3ca78e;
+  fill: #72D6BF;
   transform:scale(1.1) ;
 }
 .nav-link:active{
   transform:scale(1.1) ;
 }
 .nav-link:hover,.nav-link:focus{
-  color: #3ca78e;
+  color: #72D6BF;
 }
 .nav-link:hover svg,.nav-link:focus svg{
-  fill: #3ca78e;
+  fill: #72D6BF;
 }
 .nav-link:focus #products-icon .cls-2 ,.nav-link:active #products-icon svg{
-  fill: #3ca78e;
+  fill: #72D6BF;
 }
 
 
@@ -237,11 +237,14 @@ header{
   flex-wrap: nowrap;
 }
 .carousel-item{
-  height: 80vh;
+  height: 92vh;
   background:#777;
   position: relative; 
   background-position: center;
   background-size: cover;       
+}
+.active-nav{
+  color: #72D6BF;
 }
 .intro{
   padding-top: 100px;
