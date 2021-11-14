@@ -41,10 +41,45 @@ body {
 }
 .fade-in{
   opacity: 0;
-  transition: opacity 250ms ease-in;
+  transition: opacity 600ms ease-in;
 }
-.appear{
+.about-text .fade-in{
+  transition: opacity 900ms ease-in;
+  transition-delay: 200ms;
+
+}
+.tile-container p.fade-in{
+  transition: opacity 1s ease-in;
+  transition-delay: 100ms;
+
+
+}
+.nav-tile.fade-in{
+  transition: opacity 800ms ease-in;
+}
+.home-sections .fade-in{
+  
+  transition: opacity 700ms ease-in;
+  transition-delay: 100ms;
+}
+.fade-in.appear{
   opacity: 1;
+}
+.from-left{
+  transform:translateX(-50%);
+
+}
+.from-right{
+  
+  transform:translateX(50%);
+}
+.from-left,.from-right{
+  opacity: 0;
+  transition: opacity 600ms ease-in, transform 500ms ease-in
+}
+.from-left.appear,.from-right.appear{
+  opacity: 1;
+  transform:translateX(0) ;
 }
 /* padding-land r for all */
 .intro,.home-tiles ,.home-tiles-2,.content-section{

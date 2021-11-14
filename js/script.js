@@ -1,12 +1,14 @@
 (function (global) {
 
   var yoebar = {};
+  const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+  const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
 
   var homeHtml = "snippets/home-snippet.html";
   var commingSoomHtml = "snippets/comming-soon.html";
   const nav_tabs = document.querySelectorAll(".nav-link");
-  console.log(nav_tabs);
-  // hide nav on scroll//
+  
+  // /////////////////////hide nav on scroll////////////////////////
   var prevScrollpos = global.pageYOffset;
   global.onscroll = function() {
   var currentScrollPos = global.pageYOffset;
@@ -19,24 +21,25 @@
   }
   prevScrollpos = currentScrollPos;
 }
-  // Convenience function for inserting innerHTML for 'select'
+  // ///////////Convenience function for inserting innerHTML for 'select'
   var insertHtml = function (selector, html) {
     var targetElem = document.querySelector(selector);
     targetElem.innerHTML = html;
   };
 
-  // On page load (before images or CSS)
+  //////////// On page load (before images or CSS)
   document.addEventListener("DOMContentLoaded", function (event) {
     yoebar.loadHomePage();
     
   });
-// helper function to remove active class from all nav tabs
+///////////// helper function to remove active class from all nav tabs
   yoebar.remove_active_from_all_nav=function () {
     nav_tabs.forEach(Element=>{
     Element.classList.remove("active-nav")});  
   }
-  //load home snippet
+  //////////////////////////////////////////////////load home snippet////////////////////////////////
   yoebar.loadHomePage =function () {
+   
     if(document.querySelector(".home") == null){
       yoebar.remove_active_from_all_nav();
       document.querySelector("#home-nav").classList.add("active-nav");
@@ -46,18 +49,22 @@
         function (responseText) {
           document.querySelector("#main-content")
             .innerHTML = responseText;
+          yoebar.animations();
+
+            
         },
         false);
 
     }
     
   };
-  // load products page
+  /////////////////////////////////////////////////// load products page/////////////////////////////////////////
   yoebar.loadProductsPage =function () {
     yoebar.remove_active_from_all_nav();
     document.querySelector("#products-nav").classList.add("active-nav");
-    yoebar.loadCommingSoonPage();
+    loadCommingSoonPage();
   }
+  /////////////////////////////////////////////////// load carts page/////////////////////////////////////////
   yoebar.loadCartPage =function () {
     document.querySelector("#cart-nav").classList.add("active-nav");
     yoebar.remove_active_from_all_nav();
@@ -71,8 +78,8 @@
     insertHtml(selector, html);
   };
 
-  //comming soon ajax load
-  yoebar.loadCommingSoonPage = function () {
+  ///////////comming soon ajax load/////////////////
+  var loadCommingSoonPage = function () {
     if(document.querySelector(".comming-soon") == null){
       showLoading("#main-content");
       $ajaxUtils.sendGetRequest(commingSoomHtml,
@@ -89,7 +96,7 @@
 
 
 
-  //gentel hover start//
+  ////////////////////gentel hover start////////////////////////////
   let numberOfShapes = 10;
   let shapes = [
     "M122.2,323.47a18,18,0,1,0,18,18A18,18,0,0,0,122.2,323.47Zm0,27.74a9.71,9.71,0,1,1,9.7-9.7A9.7,9.7,0,0,1,122.2,351.21Z",
@@ -150,11 +157,45 @@
     });
 
   }
-  // gentle hover end//
+  /**************************animations***********************************/
+  yoebar.animations = function () {
+    yoebar.fadein();
+    yoebar.slide_in();  
+  }
+   //////////////////////// slide in/////////////////////////////////////////
+  yoebar.slide_in = function () {
+    const sliders = document.querySelectorAll(".slide-in");
+    sliders.forEach(slider=>{
+      appearOnScroll.observe(slider);
+    });
+  }
+  //////////////////////// fade in/////////////////////////////////////////
+  yoebar.fadein = function () {
 
-
-  //fade in//
- 
+    const faders = document.querySelectorAll(".fade-in");
+    faders.forEach(fader=>{
+      appearOnScroll.observe(fader);
+    });
+  }
+  ///////intersection observer/////////////////////////
+  const apperarOptions ={
+    threshold:0,
+    rootMargin:"0px 0px -12% 0px" 
+  };
+  const appearOnScroll = new IntersectionObserver(
+    function (entries,appearOnScroll) {
+      entries.forEach(entry=>{
+        if(!entry.isIntersecting){
+          return;
+        }else{
+          entry.target.classList.add('appear');
+          appearOnScroll.unobserve(entry.target);
+        }
+      })
+      
+    },apperarOptions
+  );
+    
   
   
 
