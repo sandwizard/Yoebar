@@ -304,7 +304,7 @@ header{
 #location-img{
   width: 100%;
   height: inherit;
-  background: url('../img/slide-1.jpg') no-repeat;
+  background: url('img/slide-1.jpg') no-repeat;
   background-size: cover;
   background-position: center;
   background-color: #777;  
@@ -324,6 +324,10 @@ header{
   left: 0;
   right: 0;
   top: 0;
+}
+#plumbing-section{
+  background-color: #2F323A;
+  height: 300px;
 }
 
 #shop_in-img{
