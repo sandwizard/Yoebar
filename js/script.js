@@ -39,7 +39,7 @@
   }
   //////////////////////////////////////////////////load home snippet////////////////////////////////
   yoebar.loadHomePage =function () {
-   
+    
     if(document.querySelector(".home") == null){
       yoebar.remove_active_from_all_nav();
       document.querySelector("#home-nav").classList.add("active-nav");
@@ -55,6 +55,9 @@
         },
         false);
 
+    }
+    else{
+      document.querySelector("#home-nav").classList.add("active-nav");
     }
     
   };
