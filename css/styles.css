@@ -965,7 +965,10 @@ header{
     width: 60%;
   }
   #pipes-section p{
-    width: 70%;
+    width: 60%;
+  }
+  #pipes-section .home-graphic{
+    width: 20vw;
   }
 }
   /* xs device End Header */
@@ -978,7 +981,12 @@ header{
     padding-left: 9vw;
     padding-right: 9vw;
   }
- 
+  #pipes-section .home-graphic{
+    width: 20vw;
+  }
+  #pipes-section p{
+    margin-left: 0;
+  }
   .home-graphic{
     width: 50vw;
   }
