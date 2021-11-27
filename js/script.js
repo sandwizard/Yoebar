@@ -97,8 +97,8 @@
   };
 
 
-
-
+  
+  /**************************animations***********************************/
   ////////////////////gentel hover start////////////////////////////
   let numberOfShapes = 10;
   let shapes = [
@@ -160,7 +160,6 @@
     });
 
   }
-  /**************************animations***********************************/
   yoebar.animations = function () {
     yoebar.fadein();
     yoebar.slide_in();  
@@ -180,6 +179,7 @@
       appearOnScroll.observe(fader);
     });
   }
+
   ///////intersection observer/////////////////////////
   const apperarOptions ={
     threshold:0,

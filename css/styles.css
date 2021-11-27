@@ -5,6 +5,22 @@ body {
   font-family: 'Roboto', sans-serif;
   
 }
+button{
+  border: 0;
+}
+iframe{
+  z-index: 99;
+  border-radius: 20px;
+}
+.hidemap{
+  width: 0;
+  height: 0;
+}
+.showmap{
+  width: 70vw;
+  height: 600px;
+}
+
 .carousel-control-prev{
   width: 40%;
 }
@@ -40,6 +56,9 @@ strong{
   animation:body-run 1.5s ease-out infinite;
   z-index:1;
   
+}
+#plumbing-section p{
+  color: white;
 }
 .fade-in{
   opacity: 0;
@@ -206,10 +225,10 @@ strong{
 
 }
 
-#paints-section p{
+#paints-section p,#tools-section p{
   margin-right: 50px;
 }
-#pipes-section p{
+#pipes-section p,#plumbing-section p{
   margin-left: 50px;
 }
 .content-section p{
@@ -223,8 +242,11 @@ strong{
 #pipes-section .home-graphic{
   width: 15vw;
 }
+#plumbing-section .home-graphic{
+  width: 40vw;
+}
 
-#paints-section{
+#paints-section,#tools-section{
 
  
 
@@ -334,7 +356,8 @@ header{
 }
 #plumbing-section{
   background-color: #2F323A;
-  height: 300px;
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
 
 #shop_in-img{
@@ -970,6 +993,10 @@ header{
   #pipes-section .home-graphic{
     width: 20vw;
   }
+  #plumbing-section p{
+    margin-left: 0;
+    width: 80%;
+  }
 }
   /* xs device End Header */
 @media (max-width: 575px) {
@@ -982,9 +1009,9 @@ header{
     padding-right: 9vw;
   }
   #pipes-section .home-graphic{
-    width: 20vw;
+    width: 28vw;
   }
-  #pipes-section p{
+  #pipes-section p,#plumbing-section p{
     margin-left: 0;
   }
   .home-graphic{
