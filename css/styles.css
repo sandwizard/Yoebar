@@ -205,8 +205,12 @@ strong{
   margin-bottom: 40vh;
 
 }
+
 #paints-section p{
-  margin-right: 40px;
+  margin-right: 50px;
+}
+#pipes-section p{
+  margin-left: 50px;
 }
 .content-section p{
   padding-top: 20px;
@@ -214,7 +218,10 @@ strong{
   font-size: 1.1em;
 }
 .home-graphic{
-  width: 30vw;
+  width: 25vw;
+}
+#pipes-section .home-graphic{
+  width: 15vw;
 }
 
 #paints-section{
@@ -304,7 +311,7 @@ header{
 #location-img{
   width: 100%;
   height: inherit;
-  background: url('img/slide-1.jpg') no-repeat;
+  background: url('../img/slide-1.jpg') no-repeat;
   background-size: cover;
   background-position: center;
   background-color: #777;  
@@ -767,6 +774,12 @@ header{
   .content-section p{
     width: 35vw;
   }
+  #pipes-section p{
+    width: 50vw;
+  }
+  #pipes-section .home-graphic{
+    width: 20vw;
+  }
   .home-graphic{
     width: 35vw;
   }
@@ -945,10 +958,14 @@ header{
     transform: translate(-50%,-50%) skewY(15deg);;
   }
   .home-graphic{
-    width: 45vw;
+    width: 25vw;
+    height: auto;
   }
   .content-section p{
-    width: 100%;
+    width: 60%;
+  }
+  #pipes-section p{
+    width: 70%;
   }
 }
   /* xs device End Header */
