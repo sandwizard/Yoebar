@@ -98,7 +98,31 @@
     yoebar.remove_active_from_all_nav();
     yoebar.loadCommingSoonPage();
   }
-
+  yoebar.showUploadForm = function () {
+    let form = document.querySelector('#fileUpload-form');
+    // blur bg
+    let blurFilter = document.querySelector('#blur-filter');
+    let darkenFilter = document.querySelector('#darken-filter');
+    blurFilter.classList.remove('d-none');
+    blurFilter.classList.add('d-block');
+    darkenFilter.classList.remove('d-none');
+    darkenFilter.classList.add('d-block');
+    form.classList.remove('uploadForm-dissapear')
+    form.classList.add('uploadForm-appear');
+  }
+  yoebar.hideForm = function () {
+    let form = document.querySelector('#fileUpload-form');
+    // blur bg
+    let blurFilter = document.querySelector('#blur-filter');
+    let darkenFilter = document.querySelector('#darken-filter');
+    blurFilter.classList.remove('d-block');
+    blurFilter.classList.add('d-none');   
+    darkenFilter.classList.remove('d-block');
+    darkenFilter.classList.add('d-none');  
+    form.classList.remove('uploadForm-appear');   
+    form.classList.add('uploadForm-dissapear')
+    
+  }
   // Show loading icon inside element identified by 'selector'.
   var showLoading = function (selector) {
     var html = "<div class='load-wrapper'>";

@@ -5,6 +5,117 @@ body {
   font-family: 'Roboto', sans-serif;
   
 }
+.content-section ul{
+  list-style: none;
+}
+#blur-filter{
+  position: fixed;
+  backdrop-filter: blur(50px);
+  left: 0;
+  top:0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  opacity: 0.5;
+  
+}
+#darken-filter{
+  position: fixed;
+  background-color: #2F323A;
+  left: 0;
+  top:0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  opacity: 0.8; 
+}
+#fileUpload-form{
+  position: fixed;
+  padding: 50px;
+  padding-bottom: 40px;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 500px;
+  background-color: white;
+  z-index: 999;
+}
+#fileUpload-form label{
+  margin-right: 10px;
+  font-weight: 700;
+}
+#fileUpload-form input[name='sender']{
+  width: 60%;
+  padding-left: 5px;
+  border-width: 2px;
+  border-radius:4px;
+  border-color: #2F323A;
+}
+#supplyOrder-section .close-button{
+  display: flex;
+  position: absolute;
+  right:0px;
+  top:0px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  transform: translate(50%,-50%);
+  border-radius: 50%;
+  border-width: 2px;
+
+}
+
+.uploadForm-dissapear{
+  display: none;
+}
+.uploadForm-appear{
+  display: block;
+}
+
+#warranty-section{
+  margin-bottom: 3rem;
+}
+
+#wholeSale-section ul{
+  border-style: solid;
+  border-width: 0px 0px 0px 7px;
+  padding-left: 1rem;
+  border-color: #72D6BF;
+  font-size: 1.5rem;
+}
+
+.services-nav{
+  position: relative;
+  min-height: 200px;
+}
+.services-nav-item{
+  color: #2B2B2B;
+  position: relative;
+}
+.services-nav-item:hover{
+  color: #2B2B2B;
+}
+.services-nav-item:hover::after{
+  width: 100%;
+}
+.services-nav-item::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0%;
+  height:2px;
+  border-radius: 100px;
+  background-color: #2B2B2B;
+  transition: 150ms ease-in;
+
+ 
+}
 
 .services-nav .navbar-header{
   width: 100%;
@@ -31,12 +142,16 @@ body {
 }
 .services-graphic h2{
   font-size: 2.4em;
+  
  
 }
 #delivery-section h2{
   position: absolute;
-  top:19%;
+  top:18%;
   left:43%;
+}
+.wr-sections{
+  margin-right: 5%;
 }
 #wholeSale-section .services-graphic{
   width: 55%;
@@ -114,16 +229,15 @@ strong{
 }
 .fade-in{
   opacity: 0;
-  transition: opacity 600ms ease-in;
+  transition: opacity 300ms ease-in;
 }
 .about-text .fade-in{
-  transition: opacity 600ms ease-in;
+  transition: opacity 300ms ease-in;
   transition-delay: 200ms;
 
 }
 .tile-container p.fade-in{
-  transition: opacity 700ms ease-in;
-  transition-delay: 100ms;
+  transition: opacity 400ms ease-in;
 
 
 }
@@ -140,30 +254,20 @@ strong{
   transition-delay:600ms ;
 }
 .nav-tile.fade-in{
-  transition: opacity 800ms ease-in;
+  transition: opacity 400ms ease-in;
 }
 
 .home-sections .fade-in{
   
-  transition: opacity 700ms ease-in;
+  transition: opacity 400ms ease-in;
   transition-delay: 100ms;
 }
 .fade-in.appear{
   opacity: 1;
 }
-.from-left{
-  transform:translateX(-50%);
 
-}
-.from-right{
-  
-  transform:translateX(50%);
-}
 
-.slide-in{
-  transition: opacity 600ms ease-in, transform 500ms ease-in, width 150ms ease-in, heigth 150ms ease-in;
-  opacity: 0;
-}
+
 
 .services-graphic img{
   width: 100%;
@@ -272,7 +376,7 @@ strong{
   padding-right: 6vw;
 }
 /* graphic sections home start*/
-.content-section{
+.content-section,#w-and-r-section{
   display: flex;
   flex-wrap: wrap;
   margin-top: 19vh;
@@ -283,13 +387,14 @@ strong{
 #paints-section p,#tools-section p{
   margin-right: 50px;
 }
-#pipes-section p,#plumbing-section p{
+#pipes-section p,#plumbing-section p,#supplyOrder-section p{
+  position: relative;
   margin-left: 50px;
 }
 .content-section p{
   padding-top: 20px;
   width: 30vw;
-  font-size: 1.1em;
+  font-size: 1.3em;
 }
 .home-graphic{
   width: 25vw;
@@ -789,9 +894,49 @@ header{
 .home-tiles-2 .tile-icon{
   width: 68%;
 }
+.wr-sections p{
+  width: 35vw;
+}
+.services-sections h2{
+  font-weight: 600;
+}
+#supplyOrder-section p{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+#supplyOrder-section button,.close-button{
+  margin-top: 2rem;
+  background-color: white;
+  border-radius: 50px;
+  padding: 0.5rem;
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+  border-color: #72D6BF;
+  transition: 100ms ease-in;
+  border-style: solid;
+}
+#supplyOrder-section button:hover,.close-button:hover{
+  background-color: #2F323A;
+  color: white;
+  border-color: #F5C396;
+}
 
 /********** xl only **********/
 @media (min-width: 1200px) {
+  .from-left{
+    transform:translateX(-50%);
+  
+  }
+  .from-right{
+    
+    transform:translateX(50%);
+  }
+  .slide-in{
+    transition: opacity 600ms ease-in, transform 500ms ease-in, width 150ms ease-in, heigth 150ms ease-in;
+    opacity: 0;
+  }
 
   .nav-tile{
     width:13vw ;
@@ -819,6 +964,18 @@ header{
 
 /********** lg only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
+  .from-left{
+    transform:translateX(-50%);
+  
+  }
+  .from-right{
+    
+    transform:translateX(50%);
+  }
+  .slide-in{
+    transition: opacity 600ms ease-in, transform 500ms ease-in, width 150ms ease-in, heigth 150ms ease-in;
+    opacity: 0;
+  }
   /* Header */
   .content-section p{
     width: 35vw;
@@ -850,6 +1007,32 @@ header{
 
 /********** md devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
+  .from-left{
+    transform:translateX(-50%);
+  
+  }
+  .from-right{
+    
+    transform:translateX(50%);
+  }f
+  .slide-in{
+    transition: opacity 600ms ease-in, transform 500ms ease-in, width 150ms ease-in, heigth 150ms ease-in;
+    opacity: 0;
+  }
+ 
+  .content-section p{
+    font-size: 1.1em;
+  }
+  .services-sections h2{
+    font-size: 2em;
+  }
+  #delivery-section h2{
+    top:15%
+  }
+  #supplyOrder-section .services-graphic{
+    width: 45%;
+    margin-right: 5%;
+  }
   .content-section p{
     width: 35vw;
   }
@@ -936,11 +1119,53 @@ header{
   .navbar-dissappear{
     top:-90px;
   }
+  .wr-sections p{
+    width: auto;
+  }
 }
 
 
 /********** sm  devices only **********/
 @media (min-width: 576px) and (max-width: 767px) {
+  .services-graphic{
+    width: 75%;
+  }
+  #supplyOrder-section .services-graphic{
+    width: 55%;
+  }
+  #wholeSale-section .services-graphic{
+    width: 70%;
+  }
+  .services-nav h1{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    height: auto;
+    text-align: center;
+    bottom:0;
+    
+  }
+  #delivery-section h2{
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+  .services-graphic,  #wholeSale-section .services-graphic{
+    flex-direction: column-reverse;
+  }
+  #wholeSale-content{
+    width: 100%;
+  }
+  .services-graphic h2 {
+    font-size: 1.7em;
+  }
+  .sm-fade-in{
+    opacity: 0;
+    transition: opacity 600ms ease-in;
+  }
+  .content-section p{
+    font-size: 1.2em;
+  }
   #logo-img{
     width: 55px;
     height: 55px;
@@ -1037,29 +1262,76 @@ header{
     transform: translate(-50%,-50%) skewY(15deg);;
   }
   .home-graphic{
-    width: 25vw;
+    width: 30vw;
     height: auto;
   }
   .content-section p{
-    width: 60%;
+    width: 100%;
   }
   #pipes-section p{
-    width: 60%;
+    width: 100%;
   }
   #pipes-section .home-graphic{
     width: 20vw;
   }
   #plumbing-section p{
     margin-left: 0;
-    width: 80%;
+    width: 100%;
+  }
+  #paints-section p,#tools-section p{
+    margin-right: 0px;
+  }
+  .content-section{
+    justify-content: center;
+    align-items: center;
   }
 }
   /* xs device End Header */
 @media (max-width: 575px) {
-  .services-nav h1{
-    height: 270px;
-    font-size: 1.4em;
+  .services-graphic{
+    width: 75%;
   }
+  #supplyOrder-section .services-graphic{
+    width: 75%;
+  }
+  #wholeSale-section .services-graphic{
+    width: 80%;
+  }
+  .services-nav h1{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    height: auto;
+    bottom:0;
+    font-size: 1.4em;
+    
+  }
+  #delivery-section h2{
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+  .services-graphic,  #wholeSale-section .services-graphic{
+    flex-direction: column-reverse;
+  }
+  #wholeSale-content{
+    width: 100%;
+  }
+  .services-graphic h2 {
+    font-size: 1.7em;
+  }
+  .sm-fade-in{
+    opacity: 0;
+    transition: opacity 600ms ease-in;
+  }
+  #paints-section p,#tools-section p{
+    margin-right: 0px;
+  }
+  .content-section p{
+    font-size: 1em;
+    margin: 0;
+  }
+
   #location-img{
     background: url('../img/slide-1_sm.jpg') no-repeat;
   }
@@ -1220,6 +1492,10 @@ header{
   .nav-tile > span{
     font-size: 3vw;
     margin-bottom: 0.7em;
+  }
+  .content-section{
+    justify-content: center;
+    align-items: center;
   }
 }
 /* for new galaxy fold  phones */
