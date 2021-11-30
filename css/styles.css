@@ -5,12 +5,64 @@ body {
   font-family: 'Roboto', sans-serif;
   
 }
-button{
-  border: 0;
+
+.services-nav .navbar-header{
+  width: 100%;
 }
-iframe{
-  z-index: 99;
-  border-radius: 20px;
+#delivery-section{
+  flex-direction: row-reverse;
+}
+.services-graphic{
+  flex-direction: column;
+  width: 50%;
+}
+#wholeSale-section div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.services-sections p{
+  display: flex;
+  align-items: center;
+}
+#supplyOrder-section .services-graphic{
+  width: 30%;
+}
+.services-graphic h2{
+  font-size: 2.4em;
+ 
+}
+#delivery-section h2{
+  position: absolute;
+  top:19%;
+  left:43%;
+}
+#wholeSale-section .services-graphic{
+  width: 55%;
+}
+#wholeSale-content{
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.services-nav .nav{
+  display: flex;
+  justify-content:center;
+}
+.services-nav .nav-item{
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-left: 1.2em;
+  margin-right: 1.2em;
+}
+.services-nav h1{
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  word-spacing: 0.25em;
 }
 .hidemap{
   width: 0;
@@ -113,9 +165,12 @@ strong{
   opacity: 0;
 }
 
+.services-graphic img{
+  width: 100%;
 
+}
 
-.home-graphic{
+.home-graphic,.services-graphic{
   position: relative;  
   display: flex;
   justify-content: center;
@@ -298,6 +353,7 @@ header{
   color:white; 
   position: fixed;
   width: 100vw;
+  height: 74px;
   z-index: 999;
   box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
   transition: all 300ms ease-in-out;
@@ -1000,6 +1056,10 @@ header{
 }
   /* xs device End Header */
 @media (max-width: 575px) {
+  .services-nav h1{
+    height: 270px;
+    font-size: 1.4em;
+  }
   #location-img{
     background: url('../img/slide-1_sm.jpg') no-repeat;
   }

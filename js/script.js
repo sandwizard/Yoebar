@@ -6,6 +6,7 @@
 
   var homeHtml = "snippets/home-snippet.html";
   var commingSoomHtml = "snippets/comming-soon.html";
+  var serviceHtml = "snippets/services-snippet.html";
   const nav_tabs = document.querySelectorAll(".nav-link");
   
   // /////////////////////hide nav on scroll////////////////////////
@@ -61,7 +62,31 @@
     }
     
   };
-  /////////////////////////////////////////////////// load products page/////////////////////////////////////////
+  //////////////////////////////////////////////////load services snippet////////////////////////////////
+  yoebar.loadServicesPage =function () {
+  
+    if(document.querySelector(".services") == null){
+      yoebar.remove_active_from_all_nav();
+      document.querySelector("#services-nav").classList.add("active-nav");
+      showLoading("#main-content");
+      $ajaxUtils.sendGetRequest(
+        serviceHtml,
+        function (responseText) {
+          document.querySelector("#main-content")
+            .innerHTML = responseText;
+          yoebar.animations();
+
+            
+        },
+        false);
+
+    }
+    else{
+      document.querySelector("#services-nav").classList.add("active-nav");
+    }
+    
+  }
+  ////////////////////////////////////////////////// load products page/////////////////////////////////////////
   yoebar.loadProductsPage =function () {
     yoebar.remove_active_from_all_nav();
     document.querySelector("#products-nav").classList.add("active-nav");
