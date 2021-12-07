@@ -19,6 +19,15 @@ body {
   opacity: 0.5;
   
 }
+.about h1{
+  height: 250px;
+  display: flex;
+  align-items:flex-end;
+  font-weight: 600;
+  word-spacing: 0.25em;
+  margin-bottom: 2rem;
+
+}
 #darken-filter{
   position: fixed;
   background-color: #2F323A;
@@ -371,7 +380,7 @@ strong{
   transform:translateX(0) ;
 }
 /* padding-land r for all */
-.intro,.home-tiles ,.home-tiles-2,.content-section{
+.intro,.home-tiles ,.home-tiles-2,.content-section,.about{
   padding-left: 6vw;
   padding-right: 6vw;
 }
@@ -383,7 +392,17 @@ strong{
   margin-bottom: 40vh;
 
 }
-
+.about p{
+  font-size: 1.4rem;
+}
+.about iframe{
+  margin-top: 50px;
+  margin-bottom: 60px;
+  width: 100%;
+  height: 70vh;
+  border: #F5C396 dashed;
+  border-width: 2px;
+}
 #paints-section p,#tools-section p{
   margin-right: 50px;
 }

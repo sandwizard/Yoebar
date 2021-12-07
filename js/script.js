@@ -1,5 +1,6 @@
 (function (global) {
 
+  
   var yoebar = {};
   const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
   const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
@@ -7,6 +8,7 @@
   var homeHtml = "snippets/home-snippet.html";
   var commingSoomHtml = "snippets/comming-soon.html";
   var serviceHtml = "snippets/services-snippet.html";
+  var aboutHtml = "snippets/about-snippet.html";
   const nav_tabs = document.querySelectorAll(".nav-link");
   
   // /////////////////////hide nav on scroll////////////////////////
@@ -63,20 +65,46 @@
     
   };
   //////////////////////////////////////////////////load services snippet////////////////////////////////
-  yoebar.loadServicesPage =function () {
-  
+  yoebar.loadServicesPage =function (section ="#services") {
+    
     if(document.querySelector(".services") == null){
       yoebar.remove_active_from_all_nav();
       document.querySelector("#services-nav").classList.add("active-nav");
       showLoading("#main-content");
+
       $ajaxUtils.sendGetRequest(
         serviceHtml,
         function (responseText) {
           document.querySelector("#main-content")
             .innerHTML = responseText;
           yoebar.animations();
+          let sec = document.querySelector(section);
+          console.log(sec);
+          sec.scrollIntoView({behavior:"auto",block:"start"});
+        },
+        false);
 
-            
+    }
+    else{
+      document.querySelector("#services-nav").classList.add("active-nav");
+    }
+    
+  }
+   //////////////////////////////////////////////////load aboutus snippet////////////////////////////////
+  yoebar.loadAboutPage =function () {
+    
+    if(document.querySelector(".about") == null){
+      yoebar.remove_active_from_all_nav();
+      document.querySelector("#about-nav").classList.add("active-nav");
+      showLoading("#main-content");
+
+      $ajaxUtils.sendGetRequest(
+        aboutHtml,
+        function (responseText) {
+          document.querySelector("#main-content")
+            .innerHTML = responseText;
+          yoebar.animations();
+          let sec = document.querySelector(section);
         },
         false);
 
@@ -94,9 +122,10 @@
   }
   /////////////////////////////////////////////////// load carts page/////////////////////////////////////////
   yoebar.loadCartPage =function () {
-    document.querySelector("#cart-nav").classList.add("active-nav");
     yoebar.remove_active_from_all_nav();
-    yoebar.loadCommingSoonPage();
+    document.querySelector("#cart-nav").classList.add("active-nav");
+   
+    loadCommingSoonPage();
   }
   yoebar.showUploadForm = function () {
     let form = document.querySelector('#fileUpload-form');
