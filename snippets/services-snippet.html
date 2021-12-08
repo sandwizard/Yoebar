@@ -76,8 +76,8 @@
                 <form id= "fileUpload-form"  class="uploadForm-dissapear" action="/upload" method="POST" enctype="multipart/form-data">
                     <label for="name">From :</label>
                     <input type="text" id ="name" name="sender" required>
-                    <input type="file" name="supplyOrder">
-                    <button>Submit</button>
+                    <input type="file" name="supplyOrder" required>
+                    <input type="submit" value="Submit">
                     <div class="close-button" onclick="$yoebar.hideForm()">x</div>
                 </form>
             </p>
