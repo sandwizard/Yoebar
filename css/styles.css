@@ -530,7 +530,6 @@ header{
 #shop-img{
   width: 100%;
   height: inherit;
-  display: flex;
   justify-content: center;
   align-items: center;
   background-color: #777;  
@@ -548,7 +547,6 @@ header{
 #shop_in-img{
   width: 100%;
   height: inherit;
-  display: flex;
   justify-content: center;
   align-items: center;
   background-color: #777;  
