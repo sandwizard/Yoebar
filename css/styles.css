@@ -518,9 +518,9 @@ header{
 #location-img{
   width: 100%;
   height: inherit;
-  background: url('../img/slide-1.webp') no-repeat;
-  background-size: cover;
-  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #777;  
   bottom: 0;
   left: 0;
@@ -530,9 +530,8 @@ header{
 #shop-img{
   width: 100%;
   height: inherit;
-  background: url('../img/slide-2.webp') no-repeat;
-  background-size: cover;
-  background-position: center;
+  justify-content: center;
+  align-items: center;
   background-color: #777;  
   bottom: 0;
   left: 0;
@@ -548,9 +547,8 @@ header{
 #shop_in-img{
   width: 100%;
   height: inherit;
-  background: url('../img/slide-3.webp') no-repeat;
-  background-size: cover;
-  background-position: center;
+  justify-content: center;
+  align-items: center;
   background-color: #777;  
   bottom: 0;
   left: 0;
