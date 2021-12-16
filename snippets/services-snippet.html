@@ -73,7 +73,7 @@
                 </div>
                 <div id = "darken-filter" class="d-none">                      
                 </div>
-                <form id= "fileUpload-form"  class="uploadForm-dissapear" action="/supplyOrder" method="POST" enctype="multipart/form-data">
+                <form id= "fileUpload-form"  class="uploadForm-dissapear" onsubmit="$yoebar.submitform(event)" enctype="multipart/form-data">
                     <div>
                         <label for="name">Sender&nbsp;:</label>
                         <input type="text" id ="sender" name="sender" required>
@@ -84,8 +84,8 @@
                     </div>                 
                     
                     <div class = 'submit-button-container'>
-                        <input type="file" name="supplyOrder" required>
-                        <button >Submit</button>
+                        <input type="file" name="supplyOrder" required multiple>
+                        <button>submit</button>
                     </div>
                     
                     <div class="close-button" onclick="$yoebar.hideForm()">x</div>

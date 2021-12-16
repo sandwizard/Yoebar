@@ -7,7 +7,7 @@ const host = 'localhost';
 const uuid = require('uuid').v4;
 const nodemailer = require("nodemailer");
 const route = express.Router();
-const port = 3000;
+const port = process.env.PORT||3000;
 const bodyparser = require('body-parser');
 
 
@@ -57,7 +57,7 @@ app.post('/supplyOrder',upload.array('supplyOrder'),(req,res)=>{
             res.send(err);
         }else{
             console.log('Email sent: ' + info.response);
-            return res.redirect('/index.html')                    
+            res.send('success');                  
         }                      
     });    
     // console.log(req);   

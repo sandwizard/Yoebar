@@ -53,12 +53,9 @@
         function (responseText) {
           document.querySelector("#main-content")
             .innerHTML = responseText;
-          yoebar.animations();
-
-            
+          yoebar.animations();           
         },
         false);
-
     }
     else{
       document.querySelector("#home-nav").classList.add("active-nav");
@@ -81,7 +78,7 @@
           yoebar.animations();
           let sec = document.querySelector(section);
           console.log(sec);
-          sec.scrollIntoView({behavior:"auto",block:"start"});
+          
         },
         false);
 
@@ -139,7 +136,32 @@
     darkenFilter.classList.add('d-block');
     form.classList.remove('uploadForm-dissapear')
     form.classList.add('uploadForm-appear');
+    
   }
+  yoebar.submitform = function(e){
+    e.preventDefault();
+    console.log('submitclicked');
+    var form = document.getElementById('fileUpload-form');
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST",'/supplyOrder');
+    xhr.onload = ()=>{
+      console.log(xhr.responseText);
+      if(xhr.responseText =='success'){
+        alert('files sent');
+        
+      }
+      else{
+        alert('something went wrong');
+      }
+    }
+    showMailing('#fileUpload-form');
+    xhr.send(new FormData(form));
+
+    
+  }
+
+  
+
   yoebar.hideForm = function () {
     let form = document.querySelector('#fileUpload-form');
     // blur bg
@@ -160,6 +182,12 @@
     insertHtml(selector, html);
   };
 
+  var showMailing = function (selector){
+    var html = "<div class='load-wrapper'>";
+    html += "<img id='mailing' src='img/mail-icon.svg'><div class='shadow'></div><h2>Loading</h2></div>";
+    insertHtml(selector, html);
+  }
+  
   ///////////comming soon ajax load/////////////////
   var loadCommingSoonPage = function () {
     if(document.querySelector(".comming-soon") == null){
@@ -169,11 +197,10 @@
         document.querySelector("#main-content").innerHTML = responseText
 
       }, false);
-
     }
-    
-
   };
+
+ 
 
 
   
