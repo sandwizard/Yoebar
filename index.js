@@ -14,7 +14,7 @@ const bodyparser = require('body-parser');
 const storage  = multer.diskStorage({
     destination:(req,file,cb)=>{
         // modyfy cb to mail order
-        cb(null,'public/supplyOrders')
+        cb(null,'supplyOrders')
     },
     filename:(req,file,cb) =>{
         const {originalname} = file;
@@ -23,7 +23,7 @@ const storage  = multer.diskStorage({
 });
 
 const app = express();
-app.use(express.static(__dirname+'/public'));
+app.use(express.static(__dirname+''));
 const upload = multer({storage:storage});
 app.use(bodyparser.urlencoded({
     extended:true

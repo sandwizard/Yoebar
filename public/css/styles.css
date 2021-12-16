@@ -284,9 +284,8 @@ strong{
   justify-content: center;
   align-items: center;
 }
-#fileUpload-form .mailSent-wrapper h1{
-  font-size: 1.3rem;
-}
+
+
 @keyframes mailing-text {
   0%{
     opacity: 0.3;
