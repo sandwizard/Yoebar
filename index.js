@@ -17,59 +17,50 @@ const storage  = multer.diskStorage({
         cb(null,'public/supplyOrders')
     },
     filename:(req,file,cb) =>{
-        const { originalname} = file;
+        const {originalname} = file;
         cb(null,`${req.body.sender}-${uuid()}-${originalname}`);
     }
 });
 
 const app = express();
 app.use(express.static(__dirname+'/public'));
-const upload = multer({storage:storage}).array('supplyOrder');
+const upload = multer({storage:storage});
 app.use(bodyparser.urlencoded({
     extended:true
 }));
 app.use(bodyparser.json());
-
+var transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true, 
+    auth: {
+        user: 'sandwizardyoebar@gmail.com',
+        pass: 'ibyioovmdpogafxf'
+    }
+    });
 // upload and senddmail
-app.post('/supplyOrder',(req,res)=>{ 
-    upload(req,res,(err)=>{
-        if(err){
-            return res.json(err);
-        }
-        else{
-            var mailOptions = {
-                from: '10zinjts@gmail.com',
-                to: '10zinjts@gmail.com',
-                subject: 'Supply-Order',
-                text: `sender:-${req.body.sender}\nEmail: ${req.body.email}}`
-                };  
-            var transporter = nodemailer.createTransport({
-                host: 'smtp.gmail.com',
-                port: 465,
-                secure: true, 
-                auth: {
-                    user: 'sandwizardyoebar@gmail.com',
-                    pass: 'ibyioovmdpogafxf'
-                }
-                });
-            console.log(mailOptions);
-            transporter.sendMail(mailOptions,(err,info)=>{ 
-                console.log('sending mail');
-                if (err) {
-                    console.log('here');
-                    res.send(err);
-                }else{
-                    console.log('Email sent: ' + info.response);
-                    return res.redirect('/index.html')                    
-                }                      
-            });
-        }
-        
-
-    })
-    
-    // console.log(req);
+app.post('/supplyOrder',upload.array('supplyOrder'),(req,res)=>{ 
    
+    var mailOptions = {
+        from: req.body.email,
+        to: '10zinjts@gmail.com',
+        subject: 'Supply-Order',
+        text: `sender:-${req.body.sender}\nEmail: ${req.body.email}`,
+        attachments: req.files
+        };  
+            
+    console.log(mailOptions);
+    transporter.sendMail(mailOptions,(err,info)=>{ 
+        console.log('sending mail');
+        if (err) {
+            console.log('here');
+            res.send(err);
+        }else{
+            console.log('Email sent: ' + info.response);
+            return res.redirect('/index.html')                    
+        }                      
+    });    
+    // console.log(req);   
    
 });
 
