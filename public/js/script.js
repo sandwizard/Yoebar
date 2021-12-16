@@ -53,12 +53,9 @@
         function (responseText) {
           document.querySelector("#main-content")
             .innerHTML = responseText;
-          yoebar.animations();
-
-            
+          yoebar.animations();           
         },
         false);
-
     }
     else{
       document.querySelector("#home-nav").classList.add("active-nav");
@@ -81,7 +78,7 @@
           yoebar.animations();
           let sec = document.querySelector(section);
           console.log(sec);
-          sec.scrollIntoView({behavior:"auto",block:"start"});
+          
         },
         false);
 
@@ -139,6 +136,7 @@
     darkenFilter.classList.add('d-block');
     form.classList.remove('uploadForm-dissapear')
     form.classList.add('uploadForm-appear');
+    
   }
   yoebar.hideForm = function () {
     let form = document.querySelector('#fileUpload-form');
