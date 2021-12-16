@@ -1,17 +1,22 @@
+const express = require('express');
+const res = require('express/lib/response');
 const http = require('http');
-const hostname = 'localhost';
+
+const host = 'localhost';
+
 const port = 3000;
 
-const fs = require('fs');
-const path = require('path');
-var indexhtml = "index.html"
-const server = http.createServer((req,res)=>{
-    console.log(req.headers);
-    res.statusCode = 200;
-    res.setHeader('content-type','text/html');
-    res.end('<html><body><h1>hrlo</h1></body></html>');
+const app = express();
 
-})
-server.listen(port,hostname,()=>{
-    console.log(`server running at http://${hostname}:${port}`);
+app.use(express.static(__dirname+'/public'));
+app.use((req,res,next)=>{
+    res.sendStatus=200;
+    res.setHeader('Content-Type','text/html');
+    res.end('<html><body><h1>load valid page</h1></body></html>');
+});
+app.post('/supplyOrder,')
+const server = http.createServer(app);
+
+server.listen(port,host,()=>{
+    console.log(`server running at http://${host}:${port}`);
 });

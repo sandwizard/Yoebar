@@ -2,8 +2,12 @@ html, body {width: auto!important; overflow-x: hidden!important}
 body {
   font-size: 16px;
   color: #312d2d;
+  font-weight: 300;
   font-family: 'Roboto', sans-serif;
   
+}
+button{
+  font-weight: 300;
 }
 .content-section ul{
   list-style: none;
@@ -23,7 +27,7 @@ body {
   height: 250px;
   display: flex;
   align-items:flex-end;
-  font-weight: 600;
+  font-weight: 400;
   word-spacing: 0.25em;
   margin-bottom: 2rem;
 
@@ -51,14 +55,32 @@ body {
 }
 #fileUpload-form label{
   margin-right: 10px;
-  font-weight: 700;
+  font-weight: 400;
 }
-#fileUpload-form input[name='sender']{
-  width: 60%;
+#fileUpload-form input[name='sender'],#fileUpload-form input[name='email']{
+  width: 76%;
   padding-left: 5px;
+  font-weight: 300;
   border-width: 2px;
   border-radius:4px;
   border-color: #2F323A;
+}
+#fileUpload-form div.submit-button-container{
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+  align-items: flex-end;
+}
+#fileUpload-form input[name='supplyOrder']{
+  font-weight: 300;
+  margin-top: 30px;
+}
+#fileUpload-form div{
+  width: 70%;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  display: flex;
 }
 #supplyOrder-section .close-button{
   display: flex;
@@ -176,7 +198,7 @@ body {
 }
 .services-nav .nav-item{
   font-size: 1.2em;
-  font-weight: 700;
+  font-weight: 450;
   margin-left: 1.2em;
   margin-right: 1.2em;
 }
@@ -185,7 +207,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 600;
+  font-weight: 400;
   word-spacing: 0.25em;
 }
 .hidemap{
@@ -201,7 +223,7 @@ body {
   width: 40%;
 }
 strong{
-  font-weight: 900;
+  font-weight: 500;
 }
 .carousel-control-next{
   width: 40%;
@@ -575,7 +597,7 @@ header{
   font-size: 1.4em;
   text-transform: uppercase;
   letter-spacing: 0.5em;
-  font-weight: 900;
+  font-weight: 300;
 }
 .navbar-brand:hover ,.navbar-brand:focus{
   color: white;
@@ -586,7 +608,7 @@ header{
 .nav-link{
   color: #fff;
   vertical-align: middle;
-  font-weight: 600;
+  font-weight: 300;
   letter-spacing: 0.04em;
   font-size: 0.75em;
   text-align: center;
@@ -618,9 +640,6 @@ header{
 }
 
 
-#products-icon .cls-2{
-  fill: #999;
-}
 .nav-link{
   padding-bottom: 0;
   padding-top: 0;
@@ -637,6 +656,9 @@ header{
 }
 .active-nav{
   color: #72D6BF;
+}
+.active-nav svg {
+  fill: #72D6BF;
 }
 .intro{
   padding-top: 100px;
@@ -656,7 +678,7 @@ header{
   padding: 0;
 }
 .about-text h1{
-  font-weight: 550;
+  font-weight: 400;
 }
 .about-text  p,.about-text ul{
   font-style: oblique;
@@ -715,7 +737,7 @@ header{
 }
 .open-hours > h1{
   font-size: 3.4em;
-  font-weight: 400;
+  font-weight: 300;
 }
 .open-hours > h2{
   position: relative;
@@ -774,7 +796,7 @@ header{
   margin-top: 40px; 
   text-align: center;
   font-size: 1.3vw;
-  font-weight: 900;
+  font-weight: 400;
   color:#2F323A;
   background-color: white;
   box-shadow: 3px 5px 10px rgba(0,0,0,0.2);
@@ -923,7 +945,7 @@ header{
   width: 35vw;
 }
 .services-sections h2{
-  font-weight: 600;
+  font-weight: 400;
 }
 #supplyOrder-section p{
   display:flex;
@@ -1313,6 +1335,35 @@ header{
 }
   /* xs device End Header */
 @media (max-width: 575px) {
+  #fileUpload-form{
+    width: 80%;
+    padding: 15px;
+  }
+  #fileUpload-form label{
+    font-size: 1em;
+
+  }
+  #fileUpload-form input[name='sender'],#fileUpload-form input[name='email']{
+    width: 90%;
+  }
+  #fileUpload-form div{
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 8px;
+  }
+  #fileUpload-form input[name='supplyOrder']{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  #fileUpload-form div.submit-button-container{
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  #fileUpload-form div.submit-button-container button{
+    
+  }
   .services-graphic{
     width: 75%;
   }
