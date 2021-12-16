@@ -73,11 +73,21 @@
                 </div>
                 <div id = "darken-filter" class="d-none">                      
                 </div>
-                <form id= "fileUpload-form"  class="uploadForm-dissapear" action="/upload" method="POST" enctype="multipart/form-data">
-                    <label for="name">From :</label>
-                    <input type="text" id ="name" name="sender" required>
-                    <input type="file" name="supplyOrder" required>
-                    <input type="submit" value="Submit">
+                <form id= "fileUpload-form"  class="uploadForm-dissapear" action="/supplyOrder" method="POST" enctype="multipart/form-data">
+                    <div>
+                        <label for="name">Sender&nbsp;:</label>
+                        <input type="text" id ="sender" name="sender" required>
+                    </div>
+                    <div>
+                        <label for='email'>Email&nbsp;:</label>
+                        <input type="email" id ="email" name="email" required>
+                    </div>                 
+                    
+                    <div class = 'submit-button-container'>
+                        <input type="file" name="supplyOrder" required>
+                        <button >Submit</button>
+                    </div>
+                    
                     <div class="close-button" onclick="$yoebar.hideForm()">x</div>
                 </form>
             </p>
