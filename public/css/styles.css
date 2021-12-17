@@ -16,6 +16,7 @@ textarea {
 button{
   font-weight: 300;
 }
+
 .content-section ul{
   list-style: none;
 }
@@ -87,9 +88,7 @@ button{
   font-weight: 300;
   margin-top: 30px;
 }
-#fileUpload-form input{
-  transition: 15;
-}
+
 #fileUpload-form div{
   position: relative;
   width: 70%;
@@ -339,6 +338,9 @@ strong{
   border-bottom: 2px solid;
   opacity:0.8;
 }
+#fileUpload-form input{
+  box-shadow: none;
+}
 #fileUpload-form input:-webkit-autofill{
   -webkit-box-shadow: 0 0 0 1000px white inset !important;
 
@@ -572,6 +574,9 @@ label{
 .intro,.home-tiles ,.home-tiles-2,.content-section,.about,.contact{
   padding-left: 6vw;
   padding-right: 6vw;
+}
+.intro {
+  display: flex;
 }
 /* graphic sections home start*/
 .content-section,#w-and-r-section{
@@ -1078,7 +1083,7 @@ header{
   width: 60px;
   margin-left: 20px;
   margin-right: 20px;
-  margin: top 10px;
+  margin-top: 10px;
   transition:transform 150ms ease-in;
   border-radius: 50%;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);

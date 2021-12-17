@@ -1,6 +1,6 @@
 const express = require('express');
-const { json } = require('express/lib/response');
-const res = require('express/lib/response');
+
+
 const http = require('http');
 const multer= require('multer');
 const host = 'localhost';
