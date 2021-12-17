@@ -19,7 +19,13 @@
       return(null); 
     }
   }
-  
+  ajaxUtils.sendPostRequest = function (req,data,cb){
+    var request = getRequestObject();
+    request.onload = ()=>{cb(request)};
+    request.open("POST",req);    
+    request.send(data);
+
+  };
   // Makes an Ajax GET request to 'requestUrl'
   ajaxUtils.sendGetRequest = 
     function(requestUrl, responseHandler, isJsonResponse) {

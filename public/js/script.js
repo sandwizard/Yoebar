@@ -158,10 +158,16 @@
   yoebar.submitfeedback =function(e){
     console.log('submitclicked');
     e.preventDefault();
+
+    var name = document.getElementById('name');
+    var email = document.getElementById('email');
+    var subject = document.getElementById('subject');
+    var message = document.getElementById('message');
     
   }
   yoebar.submitform = function(e){
     e.preventDefault();
+    //
     console.log('submitclicked');
     var sender = document.getElementById('sender').value;
     var email = document.getElementById('email').value;
@@ -177,23 +183,32 @@
       i++;
     }
     console.log(files);
-    let xhr = new XMLHttpRequest();
-    
-    formData.append("username", "Groucho");
-    xhr.open("POST",'/supplyOrder');
-    xhr.onload = ()=>{
-      console.log(xhr.responseText);
-      if(xhr.responseText =='success'){
+
+    $ajaxUtils.sendPostRequest('/supplyOrder',formData,(req)=>{
+      console.log(req);
+      if(req.responseText =='success'){
         showMailSent('#fileUpload-form');    
         
       }
       else{
         alert('something went wrong');
       }
-    }
+    });
     showMailing('#fileUpload-form');
+    // xhr.open("POST",'/supplyOrder');
+    // xhr.onload = ()=>{
+    //   console.log(xhr.responseText);
+    //   if(xhr.responseText =='success'){
+    //     showMailSent('#fileUpload-form');    
+        
+    //   }
+    //   else{
+    //     alert('something went wrong');
+    //   }
+    // }
+    // showMailing('#fileUpload-form');
   
-    xhr.send(formData);
+    // xhr.send(formData);
 
     
   }
