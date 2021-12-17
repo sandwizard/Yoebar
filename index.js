@@ -22,7 +22,7 @@ const storage  = multer.diskStorage({
 });
 
 const app = express();
-app.use(express.static(__dirname+''));
+app.use(express.static(__dirname+'/public'));
 const upload = multer({storage:storage});
 app.use(bodyparser.urlencoded({
     extended:true
