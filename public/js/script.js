@@ -82,18 +82,8 @@
           let sec = document.querySelector(section);
           sec.scrollIntoView();
           console.log(sec);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
           if(!sec===null) sec.scrollIntoView();
-=======
->>>>>>> parent of aab8946 (stoped hhere)
-=======
->>>>>>> parent of aab8946 (stoped hhere)
-          
-=======
-          sec.scrollIntoView({behavior:"auto",block:"start"});
->>>>>>> parent of 3e4683f (working)
         },
         false);
 
@@ -127,8 +117,6 @@
     }
     
   }
-<<<<<<< HEAD
-=======
   yoebar.loadContactPage =function () {
     
     if(document.querySelector(".contact") == null){
@@ -152,7 +140,6 @@
     }
     
   }
->>>>>>> parent of aab8946 (stoped hhere)
   ////////////////////////////////////////////////// load products page/////////////////////////////////////////
   yoebar.loadProductsPage =function () {
     yoebar.remove_active_from_all_nav();
@@ -177,10 +164,7 @@
     darkenFilter.classList.add('d-block');
     form.classList.remove('uploadForm-dissapear')
     form.classList.add('uploadForm-appear');
-<<<<<<< HEAD
-=======
-    
->>>>>>> parent of aab8946 (stoped hhere)
+
   }
   yoebar.submitform = function(e){
     e.preventDefault();
