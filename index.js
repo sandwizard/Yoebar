@@ -29,6 +29,7 @@ app.use(bodyparser.urlencoded({
     extended:true
 }));
 app.use(bodyparser.json());
+app.use(express.json());
 var transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
@@ -40,6 +41,7 @@ var transporter = nodemailer.createTransport({
     });
 // upload and senddmail
 app.post('/supplyOrder',upload.array('supplyOrder'),(req,res)=>{ 
+    
    
     var mailOptions = {
         from: req.body.email,
@@ -65,14 +67,13 @@ app.post('/supplyOrder',upload.array('supplyOrder'),(req,res)=>{
 });
 
 app.post('/contact',(req,res)=>{ 
-   
+    console.log(req.body);  
     var mailOptions = {
         from: req.body.email,
         to: '10zinjts@gmail.com',
-        subject: 'Supply-Order',
+        subject: req.body.subject,
         text: `name:-${req.body.name}\nEmail: ${req.body.email}\n\n${req.body.message}`,
-        };  
-            
+        };              
     console.log(mailOptions);
     transporter.sendMail(mailOptions,(err,info)=>{ 
         console.log('sending mail');
@@ -84,8 +85,7 @@ app.post('/contact',(req,res)=>{
             res.send('success');                  
         }                      
     });    
-    // console.log(req);   
-   
+    // console.log(req);     
 });
 
 

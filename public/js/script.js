@@ -163,6 +163,26 @@
     var email = document.getElementById('email');
     var subject = document.getElementById('subject');
     var message = document.getElementById('message');
+
+    let formData = {
+      name:name.value,
+      email:email.value,
+      subject:subject.value,
+      message:message.value
+    }
+    $ajaxUtils.sendPostRequest('/contact',JSON.stringify(formData),(req)=>{
+      console.log(req);
+      if(req.responseText =='success'){
+        alert('Email sent');
+        name.value ="";
+        email.value ="";
+        subject.value = "";
+        message.value = "";           
+      }
+      else{
+        alert('something went wrong');
+      }
+    },true)
     
   }
   yoebar.submitform = function(e){
@@ -193,7 +213,7 @@
       else{
         alert('something went wrong');
       }
-    });
+    },false);
     showMailing('#fileUpload-form');
     // xhr.open("POST",'/supplyOrder');
     // xhr.onload = ()=>{

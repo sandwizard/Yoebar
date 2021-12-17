@@ -19,10 +19,19 @@
       return(null); 
     }
   }
-  ajaxUtils.sendPostRequest = function (req,data,cb){
+  /**
+   * 
+   * @param {post end point} req 
+   * @param {data to be sent} data 
+   * @param {callbck function on load} cb 
+   * @param {if is json} isJsonResponse 
+   */
+  ajaxUtils.sendPostRequest = function (req,data,cb,isJsonResponse){
     var request = getRequestObject();
+    
     request.onload = ()=>{cb(request)};
-    request.open("POST",req);    
+    request.open("POST",req);  
+    if(isJsonResponse)request.setRequestHeader('content-type','application/json');  
     request.send(data);
 
   };
