@@ -9,8 +9,6 @@ const route = express.Router();
 const port = process.env.PORT||3000;
 const bodyparser = require('body-parser');
 
-const host = 'localhost';
-
 const storage  = multer.diskStorage({
     destination:(req,file,cb)=>{
         // modyfy cb to mail order
