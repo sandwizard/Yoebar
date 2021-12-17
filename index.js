@@ -1,4 +1,5 @@
 const express = require('express');
+const { json } = require('express/lib/response');
 const res = require('express/lib/response');
 const http = require('http');
 const multer= require('multer');
@@ -66,9 +67,7 @@ app.post('/supplyOrder',upload.array('supplyOrder'),(req,res)=>{
 
 
 
-
 const server = http.createServer(app);
-
 server.listen(port,host,()=>{
     console.log(`server running at http://${host}:${port}`);
 });
