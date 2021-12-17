@@ -11,7 +11,7 @@
   var serviceHtml = "snippets/services-snippet.html";
   var aboutHtml = "snippets/about-snippet.html";
   const nav_tabs = document.querySelectorAll(".nav-link");
-  
+  var ContactHtml ="snippet/contact-snippet.html";
   // /////////////////////hide nav on scroll////////////////////////
   var prevScrollpos = global.pageYOffset;
   global.onscroll = function() {
@@ -84,7 +84,10 @@
           console.log(sec);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           if(!sec===null) sec.scrollIntoView();
+=======
+>>>>>>> parent of aab8946 (stoped hhere)
 =======
 >>>>>>> parent of aab8946 (stoped hhere)
           
@@ -124,6 +127,32 @@
     }
     
   }
+<<<<<<< HEAD
+=======
+  yoebar.loadContactPage =function () {
+    
+    if(document.querySelector(".contact") == null){
+      yoebar.remove_active_from_all_nav();
+      document.querySelector("#about-nav").classList.add("active-nav");
+      //showLoading("#main-content");
+
+      $ajaxUtils.sendGetRequest(
+        aboutHtml,
+        function (responseText) {
+          document.querySelector("#main-content")
+            .innerHTML = responseText;
+          yoebar.animations();
+          let sec = document.querySelector(section);
+        },
+        false);
+
+    }
+    else{
+      document.querySelector("#services-nav").classList.add("active-nav");
+    }
+    
+  }
+>>>>>>> parent of aab8946 (stoped hhere)
   ////////////////////////////////////////////////// load products page/////////////////////////////////////////
   yoebar.loadProductsPage =function () {
     yoebar.remove_active_from_all_nav();
@@ -148,6 +177,10 @@
     darkenFilter.classList.add('d-block');
     form.classList.remove('uploadForm-dissapear')
     form.classList.add('uploadForm-appear');
+<<<<<<< HEAD
+=======
+    
+>>>>>>> parent of aab8946 (stoped hhere)
   }
   yoebar.submitform = function(e){
     e.preventDefault();
