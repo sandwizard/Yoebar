@@ -11,7 +11,7 @@
   var serviceHtml = "snippets/services-snippet.html";
   var aboutHtml = "snippets/about-snippet.html";
   const nav_tabs = document.querySelectorAll(".nav-link");
-  var ContactHtml ="snippet/contact-snippet.html";
+  var contactHtml ="snippets/contact-snippet.html";
   // /////////////////////hide nav on scroll////////////////////////
   var prevScrollpos = global.pageYOffset;
   global.onscroll = function() {
@@ -47,7 +47,7 @@
     if(document.querySelector(".home") == null){
       yoebar.remove_active_from_all_nav();
       document.querySelector("#home-nav").classList.add("active-nav");
-      showLoading("#main-content");
+      //showLoading("#main-content");
       $ajaxUtils.sendGetRequest(
         homeHtml,
         function (responseText) {
@@ -68,7 +68,7 @@
     if(document.querySelector(".services") == null){
       yoebar.remove_active_from_all_nav();
       document.querySelector("#services-nav").classList.add("active-nav");
-      showLoading("#main-content");
+      //showLoading("#main-content");
 
       $ajaxUtils.sendGetRequest(
         serviceHtml,
@@ -77,7 +77,6 @@
             .innerHTML = responseText;
           yoebar.animations();
           let sec = document.querySelector(section);
-          sec.scrollIntoView();
           console.log(sec);
           if(!sec===null) sec.scrollIntoView();
           
@@ -96,7 +95,7 @@
     if(document.querySelector(".about") == null){
       yoebar.remove_active_from_all_nav();
       document.querySelector("#about-nav").classList.add("active-nav");
-      showLoading("#main-content");
+      //showLoading("#main-content");
 
       $ajaxUtils.sendGetRequest(
         aboutHtml,
@@ -104,7 +103,6 @@
           document.querySelector("#main-content")
             .innerHTML = responseText;
           yoebar.animations();
-          let sec = document.querySelector(section);
         },
         false);
 
@@ -115,27 +113,22 @@
     
   }
   yoebar.loadContactPage =function () {
-    
+    console.log('loading contact');
     if(document.querySelector(".contact") == null){
       yoebar.remove_active_from_all_nav();
-      document.querySelector("#about-nav").classList.add("active-nav");
-      //showLoading("#main-content");
-
+      document.querySelector("#contact-nav").classList.add("active-nav");
       $ajaxUtils.sendGetRequest(
-        aboutHtml,
+        contactHtml,
         function (responseText) {
           document.querySelector("#main-content")
             .innerHTML = responseText;
           yoebar.animations();
-          let sec = document.querySelector(section);
         },
         false);
-
     }
     else{
       document.querySelector("#services-nav").classList.add("active-nav");
-    }
-    
+    }   
   }
   ////////////////////////////////////////////////// load products page/////////////////////////////////////////
   yoebar.loadProductsPage =function () {
@@ -173,6 +166,7 @@
     console.log('submitclicked');
     var form = document.getElementById('fileUpload-form');
     let xhr = new XMLHttpRequest();
+    var formdata = new FormData(form);
     xhr.open("POST",'/supplyOrder');
     xhr.onload = ()=>{
       console.log(xhr.responseText);
@@ -185,7 +179,8 @@
       }
     }
     showMailing('#fileUpload-form');
-    xhr.send(new FormData(form));
+  
+    xhr.send(formdata);
 
     
   }
@@ -225,7 +220,7 @@
   ///////////comming soon ajax load/////////////////
   var loadCommingSoonPage = function () {
     if(document.querySelector(".comming-soon") == null){
-      showLoading("#main-content");
+      //showLoading("#main-content");
       $ajaxUtils.sendGetRequest(commingSoomHtml,
       function (responseText) {
         document.querySelector("#main-content").innerHTML = responseText
