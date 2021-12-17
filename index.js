@@ -18,7 +18,7 @@ const host = 'localhost';
 const storage  = multer.diskStorage({
     destination:(req,file,cb)=>{
         // modyfy cb to mail order
-        cb(null,'supplyOrders')
+        cb(null,'public/supplyOrders')
     },
     filename:(req,file,cb) =>{
         const {originalname} = file;
@@ -27,7 +27,7 @@ const storage  = multer.diskStorage({
 });
 
 const app = express();
-app.use(express.static(__dirname+''));
+app.use(express.static(__dirname+'/public'));
 const upload = multer({storage:storage});
 app.use(bodyparser.urlencoded({
     extended:true
