@@ -1,7 +1,7 @@
 const express = require('express');
-const { json } = require('express/lib/response');
 const res = require('express/lib/response');
 const http = require('http');
+<<<<<<< HEAD
 const multer= require('multer');
 const host = 'localhost';
 const uuid = require('uuid').v4;
@@ -9,8 +9,12 @@ const nodemailer = require("nodemailer");
 const route = express.Router();
 const port = process.env.PORT||3000;
 const bodyparser = require('body-parser');
+=======
+>>>>>>> parent of 3e4683f (working)
 
+const host = 'localhost';
 
+<<<<<<< HEAD
 const storage  = multer.diskStorage({
     destination:(req,file,cb)=>{
         // modyfy cb to mail order
@@ -68,7 +72,21 @@ app.post('/supplyOrder',upload.array('supplyOrder'),(req,res)=>{
 
 
 
+=======
+const port = 3000;
+
+const app = express();
+
+app.use(express.static(__dirname+'/public'));
+app.use((req,res,next)=>{
+    res.sendStatus=200;
+    res.setHeader('Content-Type','text/html');
+    res.end('<html><body><h1>load valid page</h1></body></html>');
+});
+app.post('/supplyOrder,')
+>>>>>>> parent of 3e4683f (working)
 const server = http.createServer(app);
+
 server.listen(port,host,()=>{
     console.log(`server running at http://${host}:${port}`);
 });

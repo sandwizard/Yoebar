@@ -53,9 +53,12 @@
         function (responseText) {
           document.querySelector("#main-content")
             .innerHTML = responseText;
-          yoebar.animations();           
+          yoebar.animations();
+
+            
         },
         false);
+
     }
     else{
       document.querySelector("#home-nav").classList.add("active-nav");
@@ -78,8 +81,12 @@
           yoebar.animations();
           let sec = document.querySelector(section);
           console.log(sec);
+<<<<<<< HEAD
           if(!sec===null) sec.scrollIntoView();
           
+=======
+          sec.scrollIntoView({behavior:"auto",block:"start"});
+>>>>>>> parent of 3e4683f (working)
         },
         false);
 
@@ -154,7 +161,6 @@
     darkenFilter.classList.add('d-block');
     form.classList.remove('uploadForm-dissapear')
     form.classList.add('uploadForm-appear');
-    
   }
   yoebar.submitfeedback =function(e){
     console.log('submitclicked');

@@ -6,10 +6,6 @@ body {
   font-family: 'Roboto', sans-serif;
   
 }
-.comming-soon h1{
-  font-weight: 400;
-
-}
 button{
   font-weight: 300;
 }
@@ -1520,7 +1516,9 @@ header{
     justify-content: flex-start;
     align-items: flex-start;
   }
- 
+  #fileUpload-form div.submit-button-container button{
+    
+  }
   .services-graphic{
     width: 75%;
   }
