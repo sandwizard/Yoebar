@@ -70,6 +70,7 @@ button{
   opacity: 0.5;
 }
 
+
 #fileUpload-form input[name='sender'],#fileUpload-form input[name='email']{
   width: 80%;
   font-weight: 300;
@@ -442,7 +443,7 @@ label{
   border-width:1.5px;
   border-color:#72D6BF;
   border-radius:10px;
-  width: auto;
+  width: 43%;
   padding-top: 2%;
   padding-bottom: 2%;
   padding-right: 2%;
@@ -577,6 +578,10 @@ label{
 }
 .intro {
   display: flex;
+}
+
+.about-text{
+  width: 60%;
 }
 /* graphic sections home start*/
 .content-section,#w-and-r-section{
@@ -836,9 +841,11 @@ header{
 }
 .vr{
   margin:0 auto;
-  color: #ffffff;
-  padding: 3px;
   border-radius: 10px;
+  width : 2px;
+  background-color: white;
+  border-radius: 20px;
+
 
 }
 .about-text{
@@ -1221,6 +1228,27 @@ header{
 
 /********** md devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
+  .about-text div.fade-in{
+    padding: 0;
+  }
+  .open-hours {
+    font-size: 0.9em;
+    width:70%;
+    margin-bottom:50px;
+  }
+  .about-text h1{
+    font-size: 2.5em;
+    margin-bottom: 30px;
+  }
+  .about-text{
+    width: 100%;
+  }
+  .intro{
+    flex-direction: column;
+  }
+  .open-hours{
+    width: 45vw;
+  }
   .from-left{
     transform:translateX(-50%);
   
@@ -1296,9 +1324,6 @@ header{
   .intro{
     padding-top: 50px;
   }
-  .open-hours{
-    width: 100%;
-  }
   .open-hours span:nth-child(4){
 
     font-size: 1.3em;
@@ -1336,11 +1361,26 @@ header{
   .wr-sections p{
     width: auto;
   }
+  .about-text ul{
+    width: 40%;
+  }
 }
 
 
 /********** sm  devices only **********/
 @media (min-width: 576px) and (max-width: 767px) {
+  .about-text ul{
+    width: 60%;
+  }
+  .about-text div.fade-in{
+    padding: 0;
+  }
+  .about-text{
+    width: 100%;
+  }
+  .intro{
+    flex-direction: column;
+  }
 
   .contact-form-wrapper h1{
     text-align: right;
@@ -1449,10 +1489,16 @@ header{
     margin-top: 20px;
   }
   .intro{
-    padding-top: 35px
+    padding-top: 40px;
+    margin-bottom:20px;
   }
   .open-hours{
     width: 100%;
+    margin-bottom: 40px;
+  }
+  .about-text h1{
+    margin-bottom: 40px;
+    font-size: 3em;
   }
   .open-hours > h1{
     font-size: 3em;
@@ -1483,9 +1529,7 @@ header{
   .nav-link{
     font-size:0.6em ;
   }
-  .open-hours{
-    margin: 0;
-  }
+
   .home-tiles::before{
     height: 85%;
     transform: translate(-50%,-50%) skewY(15deg);;
@@ -1517,6 +1561,15 @@ header{
 }
   /* xs device End Header */
 @media (max-width: 575px) {
+  .about-text div.fade-in{
+    padding: 0;
+  }
+  .about-text{
+    width: 100%;
+  }
+  .intro{
+    flex-direction: column;
+  }
   
   .contact-form-wrapper form input, .contact-form-wrapper form input:focus, .contact-form-wrapper form textarea{
     width: 100%;
@@ -1610,6 +1663,7 @@ header{
     opacity: 0;
     transition: opacity 600ms ease-in;
   }
+  
   #paints-section p,#tools-section p{
     margin-right: 0px;
   }
@@ -1697,10 +1751,14 @@ header{
     border-radius: 20em;
   }
   .about-text{
-    margin-top: 20px;
+    margin-top: 30px;
+  }
+  .about-text h1{
+    margin-bottom: 20px;
+    font-size: 2.3em;
   }
   .intro{
-    padding-top: 90px
+    padding-top: 40px
   }
   .open-hours > h1{
     font-size: 2em;
@@ -1778,6 +1836,9 @@ header{
   .content-section{
     justify-content: center;
     align-items: center;
+  }
+  .about-text ul{
+    width: 80%;
   }
 }
 /* for new galaxy fold  phones */
