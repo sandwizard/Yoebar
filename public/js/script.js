@@ -63,7 +63,7 @@
     
   };
   //////////////////////////////////////////////////load services snippet////////////////////////////////
-  yoebar.loadServicesPage =function (section ="#services") {
+  yoebar.loadServicesPage =function (section=null) {
     
     if(document.querySelector(".services") == null){
       yoebar.remove_active_from_all_nav();
@@ -78,8 +78,7 @@
           yoebar.animations();
           let sec = document.querySelector(section);
           console.log(sec);
-          if(!sec===null) sec.scrollIntoView();
-          
+          sec.scrollIntoView(true);         
         },
         false);
 
