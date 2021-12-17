@@ -11,7 +11,7 @@
   var serviceHtml = "snippets/services-snippet.html";
   var aboutHtml = "snippets/about-snippet.html";
   const nav_tabs = document.querySelectorAll(".nav-link");
-  var ContactHtml ="snippet/contact-snippet.html";
+  var contactHtml ="snippets/contact-snippet.html";
   // /////////////////////hide nav on scroll////////////////////////
   var prevScrollpos = global.pageYOffset;
   global.onscroll = function() {
@@ -77,8 +77,8 @@
             .innerHTML = responseText;
           yoebar.animations();
           let sec = document.querySelector(section);
-          sec.scrollIntoView();
           console.log(sec);
+          if(!sec===null) sec.scrollIntoView();
           
         },
         false);
@@ -103,7 +103,6 @@
           document.querySelector("#main-content")
             .innerHTML = responseText;
           yoebar.animations();
-          let sec = document.querySelector(section);
         },
         false);
 
@@ -114,27 +113,22 @@
     
   }
   yoebar.loadContactPage =function () {
-    
+    console.log('loading contact');
     if(document.querySelector(".contact") == null){
       yoebar.remove_active_from_all_nav();
-      document.querySelector("#about-nav").classList.add("active-nav");
-      //showLoading("#main-content");
-
+      document.querySelector("#contact-nav").classList.add("active-nav");
       $ajaxUtils.sendGetRequest(
-        aboutHtml,
+        contactHtml,
         function (responseText) {
           document.querySelector("#main-content")
             .innerHTML = responseText;
           yoebar.animations();
-          let sec = document.querySelector(section);
         },
         false);
-
     }
     else{
       document.querySelector("#services-nav").classList.add("active-nav");
-    }
-    
+    }   
   }
   ////////////////////////////////////////////////// load products page/////////////////////////////////////////
   yoebar.loadProductsPage =function () {
@@ -162,6 +156,11 @@
     form.classList.add('uploadForm-appear');
     
   }
+  yoebar.submitfeedback =function(e){
+    console.log('submitclicked');
+    e.preventDefault();
+    
+  }
   yoebar.submitform = function(e){
     e.preventDefault();
     console.log('submitclicked');
@@ -179,6 +178,7 @@
       }
     }
     showMailing('#fileUpload-form');
+    console.log(new FormData(form));
     xhr.send(new FormData(form));
 
     
