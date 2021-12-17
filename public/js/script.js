@@ -11,7 +11,7 @@
   var serviceHtml = "snippets/services-snippet.html";
   var aboutHtml = "snippets/about-snippet.html";
   const nav_tabs = document.querySelectorAll(".nav-link");
-  var contactHtml ="snippets/contact-snippet.html";
+  var ContactHtml ="snippet/contact-snippet.html";
   // /////////////////////hide nav on scroll////////////////////////
   var prevScrollpos = global.pageYOffset;
   global.onscroll = function() {
@@ -80,9 +80,13 @@
             .innerHTML = responseText;
           yoebar.animations();
           let sec = document.querySelector(section);
+          sec.scrollIntoView();
           console.log(sec);
 <<<<<<< HEAD
+<<<<<<< HEAD
           if(!sec===null) sec.scrollIntoView();
+=======
+>>>>>>> parent of aab8946 (stoped hhere)
           
 =======
           sec.scrollIntoView({behavior:"auto",block:"start"});
@@ -110,6 +114,7 @@
           document.querySelector("#main-content")
             .innerHTML = responseText;
           yoebar.animations();
+          let sec = document.querySelector(section);
         },
         false);
 
@@ -120,22 +125,27 @@
     
   }
   yoebar.loadContactPage =function () {
-    console.log('loading contact');
+    
     if(document.querySelector(".contact") == null){
       yoebar.remove_active_from_all_nav();
-      document.querySelector("#contact-nav").classList.add("active-nav");
+      document.querySelector("#about-nav").classList.add("active-nav");
+      //showLoading("#main-content");
+
       $ajaxUtils.sendGetRequest(
-        contactHtml,
+        aboutHtml,
         function (responseText) {
           document.querySelector("#main-content")
             .innerHTML = responseText;
           yoebar.animations();
+          let sec = document.querySelector(section);
         },
         false);
+
     }
     else{
       document.querySelector("#services-nav").classList.add("active-nav");
-    }   
+    }
+    
   }
   ////////////////////////////////////////////////// load products page/////////////////////////////////////////
   yoebar.loadProductsPage =function () {
@@ -162,11 +172,6 @@
     form.classList.remove('uploadForm-dissapear')
     form.classList.add('uploadForm-appear');
   }
-  yoebar.submitfeedback =function(e){
-    console.log('submitclicked');
-    e.preventDefault();
-    
-  }
   yoebar.submitform = function(e){
     e.preventDefault();
     console.log('submitclicked');
@@ -184,7 +189,6 @@
       }
     }
     showMailing('#fileUpload-form');
-    console.log(new FormData(form));
     xhr.send(new FormData(form));
 
     

@@ -18,7 +18,7 @@ const host = 'localhost';
 const storage  = multer.diskStorage({
     destination:(req,file,cb)=>{
         // modyfy cb to mail order
-        cb(null,'public/supplyOrders')
+        cb(null,'supplyOrders')
     },
     filename:(req,file,cb) =>{
         const {originalname} = file;
@@ -27,7 +27,7 @@ const storage  = multer.diskStorage({
 });
 
 const app = express();
-app.use(express.static(__dirname+'/public'));
+app.use(express.static(__dirname+''));
 const upload = multer({storage:storage});
 app.use(bodyparser.urlencoded({
     extended:true
@@ -72,6 +72,7 @@ app.post('/supplyOrder',upload.array('supplyOrder'),(req,res)=>{
 
 
 
+<<<<<<< HEAD
 =======
 const port = 3000;
 
@@ -85,6 +86,9 @@ app.use((req,res,next)=>{
 });
 app.post('/supplyOrder,')
 >>>>>>> parent of 3e4683f (working)
+=======
+
+>>>>>>> parent of aab8946 (stoped hhere)
 const server = http.createServer(app);
 
 server.listen(port,host,()=>{

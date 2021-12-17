@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yoebar</title>
+    <link rel="icon" href="img/logo.svg">
+    <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  </head>
+<body>   
+   
+  <header >
+    <nav id="header-nav" class="navbar navbar-expand-sm ">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="#" class="d-inline-block align-middle" onclick="$yoebar.loadHome()">
+            <div id="logo-img" alt="logo image" ></div>
+          </a>
+          <a class="navbar-brand d-none d-lg-inline  " href="#" onclick="$yoebar.loadHomePage()">Yoebar Enterprise</a>
+          </div>
+          <div id ="nav_collapsible"  >
+            <ul id = "nav-list" class="nav align-items-center d-flex">
+              <li class="nav-item align-items-center active">                
+                <a id="home-nav"class="nav-link d-block active-nav" role="button" aria-current="page" href="#" onclick="$yoebar.loadHomePage();">
+                  <svg id="home-icon" class = "nav-icon d-block d-lg-none" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 191"><path class="cls-1" d="M132.08,50.34H38.45A23.31,23.31,0,0,0,15.16,73.63v93.63a23.3,23.3,0,0,0,23.29,23.29H65.79a3.86,3.86,0,0,0,3.9-3.89V132.13h31.15v54.53a3.91,3.91,0,0,0,3.9,3.89h27.34a23.3,23.3,0,0,0,23.29-23.29V73.63A23.31,23.31,0,0,0,132.08,50.34Zm15.5,116.92a15.49,15.49,0,0,1-15.5,15.5H108.63V124.34H61.9v58.42H38.45A15.54,15.54,0,0,1,23,167.26V73.63a15.54,15.54,0,0,1,15.5-15.5h93.63a15.49,15.49,0,0,1,15.5,15.5Z"/><path class="cls-1" d="M85.29,107.79a14.61,14.61,0,1,1,14.6-14.61A14.62,14.62,0,0,1,85.29,107.79Zm0-23.37a8.77,8.77,0,1,0,8.76,8.76A8.78,8.78,0,0,0,85.29,84.42Z"/><path class="cls-1" d="M167.08,57.16a2.88,2.88,0,0,1-1.59-.48L87.59,6.05a2.92,2.92,0,1,1,3.18-4.9l77.9,50.64a2.92,2.92,0,0,1-1.59,5.37Z"/><path class="cls-1" d="M3.49,57.16A2.92,2.92,0,0,1,1.9,51.79L79.8,1.15A2.92,2.92,0,0,1,83,6.05L5.08,56.68A2.88,2.88,0,0,1,3.49,57.16Z"/></svg>
+                  Home</a>                          
+              </li>   
+              <li class="nav-item  align-items-center active">
+                
+                <a id="products-nav"class="nav-link" href="#" onclick="$yoebar.loadProductsPage();">
+                  <svg id="products-icon" class="nav-icon d-block d-lg-none"data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 191"> <path class="cls-1" d="M162.87,74.14a7.81,7.81,0,0,0-.72-5.3L145.24,36.51a8.07,8.07,0,0,0-7-4.27H29.81a7.87,7.87,0,0,0-7,4.27L5.86,68.84A7.31,7.31,0,0,0,5.15,74a6.1,6.1,0,0,0-.24,1.74V182.45a7.92,7.92,0,0,0,7.9,7.9H155.12a7.87,7.87,0,0,0,7.9-7.9V75.72A9.63,9.63,0,0,0,162.87,74.14Zm-133.06-34H138.2l14.47,27.67H15.26ZM155.12,182.45H12.81V80.38H155.12Z"/><polygon class="cls-2" points="99.54 32 99.54 127.11 83.97 116.43 68.47 127.11 68.47 32 99.54 32"/></svg>
+                  Products</a>
+              </li>
+              <li class="nav-item  align-items-center">
+                
+                <a id="services-nav" class="nav-link" href="#" onclick="$yoebar.loadServicesPage();">
+                  <svg id="services-icon" class="nav-icon d-block d-lg-none"data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 191"><path class="cls-1" d="M155.84,148.68,94.16,86.92a40.2,40.2,0,0,0,1.18-9.82A44.23,44.23,0,0,0,51.16,33,42.77,42.77,0,0,0,35,36.09a2.38,2.38,0,0,0-.71.24h-.08A3.17,3.17,0,0,0,33,37.2H33a2.34,2.34,0,0,0-.47.55A2.76,2.76,0,0,0,32,38.86a3.83,3.83,0,0,0-.08,1.9,4.45,4.45,0,0,0,1,2.06L61.14,71,45,87.16,16.8,59a3.48,3.48,0,0,0-1.27-.87,3.19,3.19,0,0,0-1.5-.32,3.21,3.21,0,0,0-1.51.32,4.57,4.57,0,0,0-1.27.79l-.07.08v.08a3.46,3.46,0,0,0-.8,1.19A42.87,42.87,0,0,0,7,77.1a44.2,44.2,0,0,0,44.18,44.19,42.18,42.18,0,0,0,8.39-.87l62.32,62.23a24,24,0,1,0,34-34Zm-5.54,28.43c-6.1,6-16.79,6.1-22.89,0L64.15,113.92a3.66,3.66,0,0,0-.56-.55,3.26,3.26,0,0,0-1.26-.87,3.67,3.67,0,0,0-2.46-.16,39.33,39.33,0,0,1-8.71,1A36.31,36.31,0,0,1,14.9,77.1a32.41,32.41,0,0,1,.95-7.84L42.21,95.55a3.83,3.83,0,0,0,5.55,0L69.53,73.78a3.92,3.92,0,0,0,0-5.62L43.16,41.79a34.17,34.17,0,0,1,8-.87A36.3,36.3,0,0,1,87.43,77.1a37.53,37.53,0,0,1-1.27,9.51c-.08.15-.08.31-.16.47a3.94,3.94,0,0,0-.16,1,3.27,3.27,0,0,0,.24,1.27,3,3,0,0,0,.63,1,.81.81,0,0,0,.32.55l63.27,63.35a16.35,16.35,0,0,1,0,22.88Z"/></svg>
+                  Services</a>
+              </li>
+              <li class="nav-item  align-items-center">
+                
+                <a id ="about-nav" class="nav-link" href="#" onclick="$yoebar.loadAboutPage();">
+                  <svg id="about-icon" class="nav-icon d-block d-lg-none" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 191"><rect class="cls-1" x="77.43" y="89.18" width="17.52" height="100.74" rx="8.76"/><circle class="cls-1" cx="86.19" cy="54.14" r="13.14"/></svg>
+                  About</a>
+              </li>
+              <li class="nav-item  align-items-center">
+                
+                <a id ="contact-nav"class="nav-link" href="#" onclick="$yoebar.loadContactPage();">
+                  <svg id="contact-icon" class="nav-icon d-block d-lg-none" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 191"><path class="cls-1" d="M85.26,189.8c-16.37,0-31.68-2.31-43.11-6.52C24.48,176.77,20.77,167.57,20.77,161a64.5,64.5,0,0,1,129,0C149.76,180.89,117.36,189.8,85.26,189.8Zm0-86.14A57.4,57.4,0,0,0,27.93,161c0,14.06,29.54,21.65,57.33,21.65s57.33-7.59,57.33-21.65A57.4,57.4,0,0,0,85.26,103.66Z"/><path class="cls-1" d="M85.26,89.33a28.67,28.67,0,1,1,28.67-28.67A28.69,28.69,0,0,1,85.26,89.33Zm0-50.16a21.5,21.5,0,1,0,21.5,21.49A21.52,21.52,0,0,0,85.26,39.17Z"/></svg>
+                  Contact</a>
+              </li>
+              <li class="nav-item  align-items-center">
+                <a id = "cart-nav"class="nav-link" href="#" onclick="$yoebar.loadCartPage();">
+                  <svg id="cart-icon" class="nav-icon"  data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 245 188.77"><path class="cls-1" d="M97.7,188.2a21.53,21.53,0,1,1,21.23-21.53A21.4,21.4,0,0,1,97.7,188.2Zm0-37.4a15.88,15.88,0,1,0,15.47,15.87A15.69,15.69,0,0,0,97.7,150.8Z"/><path class="cls-1" d="M198.56,188.2a21.53,21.53,0,1,1,21.23-21.53A21.4,21.4,0,0,1,198.56,188.2Zm0-37.4A15.88,15.88,0,1,0,214,166.67,15.68,15.68,0,0,0,198.56,150.8Z"/><path class="cls-1" d="M213.05,132.07h-129l-9.73-31.86H205.51L244,25.67,52.42,28.84l-7-22.92h-.06a2.75,2.75,0,0,0-2.42-2L3.57.77A2.89,2.89,0,0,0,.46,3.38,3,3,0,0,0,3.11,6.43l37.38,3L79.14,135.46l.06.23a2.88,2.88,0,0,0,2.76,2H213.05a2.9,2.9,0,0,0,2.88-2.82A2.86,2.86,0,0,0,213.05,132.07ZM54.43,34.5l180-3L202,94.55H73.61Z"/></svg>
+                  </a>
+              </li>
+            </ul>
+        </div>
+
+        
+      </div>
+    </nav>
+  </header>
+  <div id="main-content" class="container-fluid">
+    <div class="load-wrapper">
+    
+      <img id="loading" src='img/loading.svg'>
+          <div class="shadow"></div>
+          <h2>Loading</h2>
+       
+    
+    </div>  
+      
+      
+  
+  </div>
+  
+
+    
+     <!--end of second set of home tiles--> 
+<!--end of main content-->
+
+  <footer class="panel-footer">
+    <div class="container-fluid">
+      <div class="row">
+
+        <ul class="nav facebook-and-instagram col-12 col-sm-6 ">
+          
+            <a href=""  target="_blank"class="footer-social">
+              <svg id="Layer_1" class="social-icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 215 215"><path class="cls-1" d="M213.42,107.47a105.93,105.93,0,0,1-89.29,104.6q0-37.2,0-74.38H148.9l4.73-30.87H124.12v-20c0-8.44,4.12-16.67,17.34-16.67h13.4V43.84a163.29,163.29,0,0,0-23.8-2.08c-24.3,0-40.18,14.78-40.18,41.54v23.52h-27v30.87h27v74.38a105.9,105.9,0,1,1,122.54-104.6Z"/><path class="cls-2" d="M124.12,86.79v20h29.51l-4.73,30.87H124.12q0,37.19,0,74.38v0c-2.61.42-5.57.79-8.84,1-1.69.12-4.7.3-8.39.29a108.11,108.11,0,0,1-16-1.3V137.69h-27V106.82h27V83.3c0-26.76,15.88-41.54,40.18-41.54a163.29,163.29,0,0,1,23.8,2.08V70.12h-13.4C128.24,70.12,124.12,78.35,124.12,86.79Z"/></svg>
+            </a>
+            <a href=""  target="_blank"class="footer-social">
+              <svg id="Layer_1" class="social-icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 215 215"><circle class="cls-1" cx="107.5" cy="107.5" r="105.92"/><path class="cls-2" d="M108.29,34.86c-20.85,0-23.46.09-31.65.46S62.88,37,58,38.89A39.25,39.25,0,0,0,35.54,61.34,56.81,56.81,0,0,0,32,80c-.37,8.19-.46,10.81-.46,31.66s.09,23.46.46,31.65,1.68,13.76,3.57,18.64A39.3,39.3,0,0,0,58,184.39c4.88,1.89,10.46,3.19,18.64,3.57s10.8.46,31.65.46,23.47-.09,31.66-.46a56.81,56.81,0,0,0,18.64-3.57A39.25,39.25,0,0,0,181,161.93c1.9-4.88,3.2-10.46,3.57-18.64s.46-10.8.46-31.65S185,88.17,184.61,80,182.94,66.23,181,61.34a39.19,39.19,0,0,0-22.45-22.45c-4.89-1.9-10.47-3.2-18.64-3.57S129.14,34.86,108.29,34.86Zm0,13.83c20.5,0,22.93.08,31,.45,7.48.34,11.55,1.59,14.25,2.64a25.49,25.49,0,0,1,14.58,14.58c1,2.7,2.3,6.77,2.64,14.25.37,8.1.45,10.53.45,31s-.08,22.93-.45,31c-.34,7.49-1.59,11.55-2.64,14.26a25.44,25.44,0,0,1-14.58,14.57c-2.7,1-6.77,2.3-14.25,2.65-8.1.36-10.53.44-31,.44s-22.93-.08-31-.45c-7.49-.34-11.55-1.59-14.26-2.64a25.38,25.38,0,0,1-14.57-14.57c-1-2.71-2.3-6.77-2.65-14.26-.36-8.09-.44-10.52-.44-31s.08-22.93.44-31c.35-7.48,1.6-11.55,2.65-14.25A25.44,25.44,0,0,1,63,51.78c2.71-1.05,6.77-2.3,14.26-2.64,8.09-.37,10.52-.45,31-.45"/><path class="cls-2" d="M108.29,137.23a25.6,25.6,0,1,1,25.6-25.59A25.59,25.59,0,0,1,108.29,137.23Zm0-65a39.43,39.43,0,1,0,39.43,39.43,39.42,39.42,0,0,0-39.43-39.43m50.2-1.56a9.22,9.22,0,1,1-9.21-9.21,9.21,9.21,0,0,1,9.21,9.21"/></svg>
+            </a>
+
+ 
+        </ul>
+        <ul class="nav twitter-and-whatsapp col-12 col-sm-6 col-">
+
+          <a href="" target="_blank"class="footer-social">
+            <svg id="Layer_1" class="social-icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 215 215"><circle class="cls-1" cx="107.5" cy="107.5" r="105.92"/><path class="cls-2" d="M80.89,165.8c54.13,0,83.72-44.86,83.72-83.75,0-1.28,0-2.54-.08-3.81A59.75,59.75,0,0,0,179.21,63a58.76,58.76,0,0,1-16.9,4.64,29.54,29.54,0,0,0,12.94-16.28,59.16,59.16,0,0,1-18.68,7.14,29.46,29.46,0,0,0-50.15,26.84A83.53,83.53,0,0,1,45.77,54.59a29.48,29.48,0,0,0,9.11,39.3A29.23,29.23,0,0,1,41.56,90.2c0,.13,0,.25,0,.38a29.42,29.42,0,0,0,23.61,28.85,29.32,29.32,0,0,1-13.29.51,29.44,29.44,0,0,0,27.49,20.44,59.67,59.67,0,0,1-43.57,12.2A83.28,83.28,0,0,0,80.9,165.8"/></svg>
+          </a>
+          <a href="https://wa.me/97517110773" target="_blank"class="footer-social">
+            <svg id="Layer_1" class="social-icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 215 215"><circle class="cls-1" cx="107.5" cy="107.5" r="105.92"/><path class="cls-2" d="M139.84,117.56c-.26-.13-10.09-5-11.83-5.6a7,7,0,0,0-2.29-.5,3.89,3.89,0,0,0-3.31,2c-1,1.46-4,4.93-4.87,6-.12.13-.29.3-.38.3s-1.61-.63-2.07-.83c-10.54-4.58-18.54-15.59-19.64-17.44a1.1,1.1,0,0,1-.17-.39,3.29,3.29,0,0,1,.58-.68c.53-.53,1.11-1.23,1.68-1.9l.79-1A10.54,10.54,0,0,0,99.92,95l.22-.44a4.6,4.6,0,0,0-.13-4.32c-.23-.46-4.38-10.47-4.82-11.53C94.13,76.15,92.73,75,90.78,75L90,75c-.92,0-6,.7-8.17,2.1s-6.34,6.22-6.34,14.55c0,7.49,4.75,14.57,6.8,17.26,0,.07.14.21.28.4,7.82,11.43,17.57,19.89,27.45,23.84,9.52,3.8,14,4.24,16.58,4.24h0a24.51,24.51,0,0,0,2.7-.16l.48,0c3.29-.3,10.52-4,12.16-8.61,1.29-3.59,1.63-7.52.77-9A6.11,6.11,0,0,0,139.84,117.56Z"/><path class="cls-2" d="M108.7,40.11c-36.51,0-66.2,29.47-66.2,65.7A65.23,65.23,0,0,0,51.57,139L40.2,172.58a1.76,1.76,0,0,0,1.66,2.31,1.89,1.89,0,0,0,.53-.08l35-11.12a66.59,66.59,0,0,0,31.34,7.82c36.5,0,66.19-29.47,66.19-65.7S145.2,40.11,108.7,40.11Zm0,117.71a52.45,52.45,0,0,1-28.86-8.6,1.74,1.74,0,0,0-1-.29,2,2,0,0,0-.53.08l-17.52,5.57,5.66-16.68a1.76,1.76,0,0,0-.25-1.6,51.28,51.28,0,0,1-10-30.49c0-28.68,23.52-52,52.44-52s52.43,23.33,52.43,52S137.61,157.82,108.7,157.82Z"/></svg> 
+    
+          </a>
+
+
+          
+
+        </ul>
+          
+          
+    
+        
+      </div>
+     
+    </div>
+    
+  
+  </footer>
+
+  
+       
+
+  
+    
+    
+   
+
+
+
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  
+  <script src ="js/gsap.min.js"></script> 
+  <script src="js/ajax-utils.js"></script>  
+  <script src="js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>  
+  <script type = "module" src="js/script.js"></script>  
+</body>
+</html>

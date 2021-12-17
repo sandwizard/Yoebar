@@ -57,18 +57,14 @@ button{
 #fileUpload-form label{
   margin-right: 10px;
   font-weight: 400;
-  position: absolute;
-  left: 0;
-  opacity: 0.5;
 }
-
 #fileUpload-form input[name='sender'],#fileUpload-form input[name='email']{
-  width: 80%;
+  width: 76%;
+  padding-left: 5px;
   font-weight: 300;
-  border:none;
-  border-bottom: 2px solid;
+  border-width: 2px;
+  border-radius:4px;
   border-color: #2F323A;
-  padding: 0;
 }
 #fileUpload-form div.submit-button-container{
   width: 100%;
@@ -80,15 +76,11 @@ button{
   font-weight: 300;
   margin-top: 30px;
 }
-#fileUpload-form input{
-  transition: 15;
-}
 #fileUpload-form div{
-  position: relative;
   width: 70%;
   flex-wrap: nowrap;
   justify-content: space-between;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
   display: flex;
 }
 #supplyOrder-section .close-button{
@@ -288,96 +280,7 @@ strong{
   justify-content: center;
   align-items: center;
 }
-.contact-form-wrapper{
-  height: 100vh;
-  background-color: #F5C396;
-  padding: 100px;
-}
-.contact-form-wrapper h1{
-  width: 60%;
-  display: flex;
-  font-size: 3.4rem;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 40px;
-  text-align: end;
-}
-.contact-form-wrapper form{
-  display: flex;
-  flex-direction: column;
-}
-.contact-form-wrapper button{
-  border-radius: 50px;
-  padding: 0.5rem;
-  padding-left: 1.3rem;
-  padding-right: 1.3rem;
-  background-color: #72D6BF;
-  color: #2F323A;
-  border-color: #72D6BF;
-  transition: 100ms ease-in;
-  font-weight: 400;
-  border-style: solid;
-  font-size: 1rem;
-  width: max-content;
-}
-.contact-form-wrapper button:hover{
-  background-color: #2F323A;
-  color: white;
-}
-.contact-form-wrapper form input,.contact-form-wrapper form input:focus,.contact-form-wrapper form textarea{
-  width: 60%;
-  background-color: #F5C396;
-  border: 0;
-  margin-bottom: 35px;
-  border-bottom: 2px solid;
-  opacity:0.8;
-}
-#fileUpload-form input:-webkit-autofill{
-  -webkit-box-shadow: 0 0 0 1000px white inset !important;
 
-}
-input:-webkit-autofill,
-textarea:-webkit-autofill,
-select:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 1000px #F5C396 inset !important;
-}
-input:focus,textarea:focus 		{ outline:none; }
-.contact-form-wrapper form textarea{
-  height: 175px;
-  margin-top: 20px;
-}
-.contact-form-wrapper div{
-  position: relative;
-}
-input:focus ~ label, input:valid ~ label, input:-webkit-autofill~ label{
-  top:-23px;
-  font-size: 0.8em;
-  opacity: 0.5;
-  left: 0;
-}
-#fileUpload-form input:focus~  label,#fileUpload-form input:valid~label,#fileUpload-form input:-webkit-autofill~label{
-  top:-18px;
-  font-size: 0.75em;
-  opacity: 0.5;
-  left: 0;
-}
-
-textarea:focus~label,textarea:valid	{
-  top:-6px;
-  font-size: 0.8em;
-  opacity: 0.5;
-  left: 0;
-
-}
-label{
-  position: absolute;
-  left: 0;
-  font-weight: 400;
-  opacity: 0.8;
-  font-size: 1rem;
-  transition: ease-in 150ms;
-
-}
 
 @keyframes mailing-text {
   0%{
@@ -562,7 +465,7 @@ label{
   transform:translateX(0) ;
 }
 /* padding-land r for all */
-.intro,.home-tiles ,.home-tiles-2,.content-section,.about,.contact{
+.intro,.home-tiles ,.home-tiles-2,.content-section,.about{
   padding-left: 6vw;
   padding-right: 6vw;
 }
