@@ -1336,6 +1336,21 @@ header{
 
 /********** sm  devices only **********/
 @media (min-width: 576px) and (max-width: 767px) {
+
+  .contact-form-wrapper h1{
+    text-align: right;
+    margin-right: 0;
+    margin-left: auto;
+
+  }
+ 
+  .contact-form-wrapper form input, .contact-form-wrapper form input:focus, .contact-form-wrapper form textarea{
+    width: 100%;
+  }
+  
+  .contact-form-wrapper{
+    height: auto;
+  }
   .services-graphic{
     width: 75%;
   }
@@ -1497,9 +1512,35 @@ header{
 }
   /* xs device End Header */
 @media (max-width: 575px) {
+  
+  .contact-form-wrapper form input, .contact-form-wrapper form input:focus, .contact-form-wrapper form textarea{
+    width: 100%;
+  }
+  .contact-form-wrapper{
+    padding:40px;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+
+  }
+  .contact-form-wrapper {
+    height: auto;
+
+  }
+  .contact-form-wrapper form{
+    width: 100%;
+  }
+  .contact-form-wrapper h1{
+    margin-right: 20px;
+    margin-top: 80px;
+    font-size: 2.3rem;
+  }
   #fileUpload-form{
     width: 80%;
-    padding: 15px;
+    height: auto;
+    padding: 40px;
+    padding-top: 40px;
+    padding-bottom: 10px;
   }
   #fileUpload-form label{
     font-size: 1em;
@@ -1507,6 +1548,7 @@ header{
   }
   #fileUpload-form input[name='sender'],#fileUpload-form input[name='email']{
     width: 90%;
+    margin-bottom: 30px;
   }
   #fileUpload-form div{
     width: 100%;
@@ -1514,10 +1556,13 @@ header{
     margin-bottom: 8px;
   }
   #fileUpload-form input[name='supplyOrder']{
-    margin-top: 20px;
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
     
+  }
+  #supplyOrder-section button{
+    margin-bottom: 20px;
   }
   #fileUpload-form div.submit-button-container{
     justify-content: flex-start;

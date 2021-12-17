@@ -64,7 +64,29 @@ app.post('/supplyOrder',upload.array('supplyOrder'),(req,res)=>{
    
 });
 
-
+app.post('/contact',(req,res)=>{ 
+   
+    var mailOptions = {
+        from: req.body.email,
+        to: '10zinjts@gmail.com',
+        subject: 'Supply-Order',
+        text: `name:-${req.body.name}\nEmail: ${req.body.email}\n\n${req.body.message}`,
+        };  
+            
+    console.log(mailOptions);
+    transporter.sendMail(mailOptions,(err,info)=>{ 
+        console.log('sending mail');
+        if (err) {
+            console.log('here');
+            res.send(err);
+        }else{
+            console.log('Email sent: ' + info.response);
+            res.send('success');                  
+        }                      
+    });    
+    // console.log(req);   
+   
+});
 
 
 

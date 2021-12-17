@@ -164,9 +164,23 @@
   yoebar.submitform = function(e){
     e.preventDefault();
     console.log('submitclicked');
-    var form = document.getElementById('fileUpload-form');
+    var sender = document.getElementById('sender').value;
+    var email = document.getElementById('email').value;
+    var files = document.getElementById('supplyOrders').files;
+    var formData = new FormData();
+    formData.append('sender',sender);
+    formData.append('email',email);
+    console.log('0' + files[0]);
+    var i = 0;
+    for(var file in files){
+      console.log(files[i]);
+      formData.append('supplyOrder',files[i]);
+      i++;
+    }
+    console.log(files);
     let xhr = new XMLHttpRequest();
-    var formdata = new FormData(form);
+    
+    formData.append("username", "Groucho");
     xhr.open("POST",'/supplyOrder');
     xhr.onload = ()=>{
       console.log(xhr.responseText);
@@ -180,7 +194,7 @@
     }
     showMailing('#fileUpload-form');
   
-    xhr.send(formdata);
+    xhr.send(formData);
 
     
   }
