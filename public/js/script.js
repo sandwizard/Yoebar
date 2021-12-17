@@ -79,8 +79,8 @@
           let sec = document.querySelector(section);
           sec.scrollIntoView();
           console.log(sec);
-
           if(!sec===null) sec.scrollIntoView();
+          
         },
         false);
 
