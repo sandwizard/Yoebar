@@ -235,8 +235,8 @@
 
   
   var showMailSent = function(selector){
-    var html = "<div class='mailSent-wrapper'>";
-    html += "<h1>Mail sent</h1><div class='close-button' onclick='$yoebar.hideForm()'>x</div></div>";
+    var html = "<div class='close-button' onclick='$yoebar.hideForm()'>x</div><div class='mailSent-wrapper'>";
+    html += "<h1>Mail sent</h1></div>";
     insertHtml(selector, html);
   }
   yoebar.hideForm = function () {
