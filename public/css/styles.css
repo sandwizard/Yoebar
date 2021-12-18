@@ -6,6 +6,9 @@ body {
   font-family: 'Roboto', sans-serif;
   
 }
+#tank-carousel{
+  background-color: rgba(211, 154, 80, 0.1);
+}
 textarea {
   resize: none;
 }
@@ -21,6 +24,19 @@ button{
   position: absolute;
   width: 1.4vw;
   fill: white;
+  transition: 100ms ease-in;
+}
+.carousel-control-next:hover .next-icon,.carousel-control-prev:hover .prev-icon{
+  opacity: 0.4;
+}
+#tank-carousel .next-icon,#tank-carousel .prev-icon {
+  position: absolute;
+  width: 1.4vw;
+  fill: #2F323A;
+}
+
+#tank-carousel .carousel-control-next,#tank-carousel .carousel-control-prev{
+  height: 100%;
 }
 .carousel-control-next, .carousel-control-prev{
   opacity: 1;
@@ -1214,16 +1230,22 @@ header{
 #pipes-section{
   margin-bottom: 40px;
 }
-.tank {
-  width: 100%;
+#tank-carousel .carousel-item{
   height: 400px;
-  background:none;
-  margin-bottom: 120px;
-
 }
 .tank img{
-  height: 100%;
+  width: 100%;
   width: auto;
+}
+#tank-carousel .carousel-indicators li{
+  background-color: #2F323A;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.tank{
+  padding: 0;
+  background: none;
 }
 .tank .container-fluid{
   display: flex;
@@ -1278,6 +1300,10 @@ header{
 
 /********** lg only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
+  .tank img{
+    width: 40vw;
+    object-fit: contain;
+  }
   .from-left{
     transform:translateX(-50%);
   
@@ -1321,6 +1347,18 @@ header{
 
 /********** md devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
+  .tank .container-fluid{
+    flex-direction: column;
+    align-items: center;
+  }
+  #tank-carousel .carousel-item{
+    height: 560px;
+    margin-top: 80px;
+  }
+  .tank img{
+    width: 40vw;
+    object-fit: contain;
+  }
   .about-text div.fade-in{
     padding: 0;
   }
@@ -1462,6 +1500,18 @@ header{
 
 /********** sm  devices only **********/
 @media (min-width: 576px) and (max-width: 767px) {
+  .tank .container-fluid{
+    flex-direction: column;
+    align-items: center;
+  }
+  #tank-carousel .carousel-item{
+    height: 600px;
+    margin-top: 80px;
+  }
+  .tank img{
+    width: 50vw;
+    object-fit: contain;
+  }
   .about-text ul{
     width: 60%;
   }
@@ -1485,7 +1535,9 @@ header{
   .contact-form-wrapper form input, .contact-form-wrapper form input:focus, .contact-form-wrapper form textarea{
     width: 100%;
   }
-  
+  #pipes-section p{
+    margin-left: 0;
+  }
   .contact-form-wrapper{
     height: auto;
   }
@@ -1654,6 +1706,21 @@ header{
 }
   /* xs device End Header */
 @media (max-width: 575px) {
+  .tank .container-fluid{
+    flex-direction: column;
+    align-items: center;
+  }
+  #tank-carousel .carousel-item{
+    height: 730px;
+    margin-top: 80px;
+  }
+  .tank img{
+    width: 60vw;
+    object-fit: contain;
+  }
+  #tank-carousel p{
+    font-size: 1em;
+  }
   .about-text div.fade-in{
     padding: 0;
   }
@@ -1764,8 +1831,12 @@ header{
     font-size: 1em;
     margin: 0;
   }
-
-  .intro,.home-tiles ,.home-tiles-2,.content-section,.tank-carousel{
+  .tank-text{
+    padding:10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .intro,.home-tiles ,.home-tiles-2,.content-section,#tank-carousel{
     padding-left: 9vw;
     padding-right: 9vw;
   }
@@ -1946,5 +2017,16 @@ header{
   }
   #cart-icon{
     height: 25px;
+  }
+  #tank-carousel .carousel-item{
+    height: 610px;
+    margin-top: 80px;
+  }
+  .tank img{
+    width: 60vw;
+    object-fit: contain;
+  }
+  #tank-carousel p{
+    font-size: 0.8em;
   }
 }
