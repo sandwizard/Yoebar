@@ -9,8 +9,8 @@ const host = 'localhost';
 const uuid = require('uuid').v4;
 const nodemailer = require("nodemailer");
 const route = express.Router();
-const port = process.env.PORT||3000;
-const s_port = process.env.PORT||5000;
+//const port = process.env.PORT||3000;
+const s_port = process.env.PORT||3000;
 const bodyparser = require('body-parser');
 
 
@@ -92,12 +92,12 @@ app.post('/contact',(req,res)=>{
     // console.log(req);     
 });
 
-const server = http.createServer(app);
-const httpsServer = https.createServer(app);
 
-server.listen(port,()=>{
-    console.log(`listening on port${port}`);
-});
+const httpsServer = https.createServer(app);
+// const server = http.createServer(app);
+// server.listen(port,()=>{
+//     console.log(`listening on port${port}`);
+// });
 
 
 httpsServer.listen(s_port,()=>{
