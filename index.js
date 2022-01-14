@@ -92,6 +92,6 @@ app.post('/contact',(req,res)=>{
 
 
 const server = http.createServer(app);
-server.listen(port,host,()=>{
-    console.log(`server running at http://${host}:${port}`);
+server.listen(port,()=>{
+    console.log(`listening on port${port}`);
 });
