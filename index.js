@@ -49,7 +49,7 @@ app.post('/supplyOrder',upload.array('supplyOrder'),(req,res)=>{
    
     var mailOptions = {
         from: req.body.email,
-        to: 'thindoeji@gmail.com',
+        to: 'thindorji@gmail.com',
         subject: 'Supply-Order',
         text: `sender:-${req.body.sender}\nEmail: ${req.body.email}`,
         attachments: req.files
