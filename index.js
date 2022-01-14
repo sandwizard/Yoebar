@@ -25,10 +25,7 @@ const storage  = multer.diskStorage({
     }
 });
 
-var httpsOptions = {
-    key: fs.readFileSync(path.join(certPath, "ssl.key")),
-    cert: fs.readFileSync(path.join(certPath, "ssl.crt"))
-};
+
 const app = express();
 app.use(express.static(__dirname+'/public'));
 const upload = multer({storage:storage});
