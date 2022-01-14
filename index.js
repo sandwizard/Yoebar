@@ -100,7 +100,7 @@ const httpsServer = https.createServer(app);
 server.listen(port,()=>{
     console.log(`listening on port${port}`);
 });
-httpsserver.listen(s_port,()=>{
+httpsServer.listen(s_port,()=>{
 
     console.log(`listening on port${port}`);
 });
