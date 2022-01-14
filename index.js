@@ -49,7 +49,7 @@ app.post('/supplyOrder',upload.array('supplyOrder'),(req,res)=>{
    
     var mailOptions = {
         from: req.body.email,
-        to: '10zinjts@gmail.com',
+        to: 'thindoeji@gmail.com',
         subject: 'Supply-Order',
         text: `sender:-${req.body.sender}\nEmail: ${req.body.email}`,
         attachments: req.files
@@ -74,7 +74,7 @@ app.post('/contact',(req,res)=>{
     console.log(req.body);  
     var mailOptions = {
         from: req.body.email,
-        to: '10zinjts@gmail.com',
+        to: 'thindorji@gmail.com',
         subject: req.body.subject,
         text: `name:-${req.body.name}\nEmail: ${req.body.email}\n\n${req.body.message}`,
         };              
