@@ -93,14 +93,15 @@ app.post('/contact',(req,res)=>{
 });
 
 
-const httpsServer = https.createServer(app);
 const server = http.createServer(app);
+
+//const httpsServer = https.createServer(app);
 server.listen(port,()=>{
     console.log(`listening on port${port}`);
 });
 
 
-httpsServer.listen(s_port,()=>{
+// httpsServer.listen(s_port,()=>{
 
-    console.log(`listening on port${port}`);
-});
+//     console.log(`listening on port${port}`);
+// });
