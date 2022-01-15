@@ -14,6 +14,7 @@ textarea {
 }
 .slide-img {
   width: 100vw;
+  
 }
 .comming-soon h1{
   font-weight: 400;
@@ -803,6 +804,7 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
+  background-position: center;
   background-color: #777;  
   bottom: 0;
   left: 0;
@@ -815,6 +817,7 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
+  background-position: center;
   background-color: #777;  
   bottom: 0;
   left: 0;
@@ -1594,7 +1597,7 @@ header{
   }
  
   .carousel-item{
-    height: 50vw;
+    height: 35vh;
   }
  
 
@@ -1714,7 +1717,8 @@ header{
     height: 60px;
   }
   .slide-img {
-    width: 140vw;
+    width: 100vw;
+    transform: translateY(10px);
   }
   .tank .container-fluid{
     flex-direction: column;
