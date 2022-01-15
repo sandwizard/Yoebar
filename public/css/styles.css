@@ -12,6 +12,9 @@ body {
 textarea {
   resize: none;
 }
+.slide-img {
+  width: 100vw;
+}
 .comming-soon h1{
   font-weight: 400;
 
@@ -20,6 +23,7 @@ button{
   font-weight: 300;
   color: #2F323A;
 }
+
 .next-icon,.prev-icon {
   position: absolute;
   width: 1.4vw;
@@ -1706,6 +1710,12 @@ header{
 }
   /* xs device End Header */
 @media (max-width: 575px) {
+  #header-nav{
+    height: 60px;
+  }
+  .slide-img {
+    width: 140vw;
+  }
   .tank .container-fluid{
     flex-direction: column;
     align-items: center;
@@ -1858,7 +1868,7 @@ header{
   }
   
   .carousel-item{
-    height: 50vh;
+    height: 40vh;
   }
   #loading {
     height:200px;  
