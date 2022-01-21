@@ -10,7 +10,7 @@ const uuid = require('uuid').v4;
 const nodemailer = require("nodemailer");
 const route = express.Router();
 const port = process.env.PORT||3000;
-const Sport = process.env.PORT||443;
+const Sport = process.env.PORT||5000;
 const bodyparser = require('body-parser');
 const ssl = __dirname + "/ssl"
 var options = {
@@ -97,10 +97,10 @@ app.post('/contact',(req,res)=>{
 });
 
 
-const server = http.createServer(app);
-server.listen(port,()=>{
-    console.log(`listening on port${port}`);
-});
+// const server = http.createServer(app);
+// server.listen(port,()=>{
+//     console.log(`listening on port${port}`);
+// });
 const httpsServer = https.createServer(options,app);
 httpsServer.listen(Sport,()=>{
 
