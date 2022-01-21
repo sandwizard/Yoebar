@@ -13,7 +13,9 @@ const port = process.env.PORT||3000;
 const s_port = process.env.PORT||5000;
 const bodyparser = require('body-parser');
 
-
+var options = {
+    
+}
 const storage  = multer.diskStorage({
     destination:(req,file,cb)=>{
         // modyfy cb to mail order
