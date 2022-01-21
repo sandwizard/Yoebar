@@ -1,6 +1,6 @@
 const express = require('express');
 const compression = require('compression');
-
+var fs = require('fs');
 
 const http = require('http');
 const https = require('https');
@@ -10,12 +10,15 @@ const uuid = require('uuid').v4;
 const nodemailer = require("nodemailer");
 const route = express.Router();
 const port = process.env.PORT||3000;
-const s_port = process.env.PORT||5000;
+const Sport = process.env.PORT||443;
 const bodyparser = require('body-parser');
-
+const ssl = __dirname + "/ssl"
 var options = {
-    
-}
+    key: fs.readFileSync(ssl +"/server.key"),
+    cert: fs.readFileSync(ssl +"/server.crt"),
+    ca: fs.readFileSync(ssl +"/server.pem"),
+  };
+
 const storage  = multer.diskStorage({
     destination:(req,file,cb)=>{
         // modyfy cb to mail order
@@ -96,14 +99,14 @@ app.post('/contact',(req,res)=>{
 
 
 const server = http.createServer(app);
-
-//const httpsServer = https.createServer(app);
 server.listen(port,()=>{
     console.log(`listening on port${port}`);
 });
+const httpsServer = https.createServer(options,app);
 
 
-// httpsServer.listen(s_port,()=>{
 
-//     console.log(`listening on port${port}`);
-// });
+httpsServer.listen(Sport,()=>{
+
+     console.log(`listening on port${Sport}`);
+});
