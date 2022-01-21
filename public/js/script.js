@@ -47,7 +47,7 @@
     if(document.querySelector(".home") == null){
       yoebar.remove_active_from_all_nav();
       document.querySelector("#home-nav").classList.add("active-nav");
-      //showLoading("#main-content");
+      showLoading("#main-content");
       $ajaxUtils.sendGetRequest(
         homeHtml,
         function (responseText) {
@@ -68,7 +68,7 @@
     if(document.querySelector(".services") == null){
       yoebar.remove_active_from_all_nav();
       document.querySelector("#services-nav").classList.add("active-nav");
-      //showLoading("#main-content");
+      showLoading("#main-content");
 
       $ajaxUtils.sendGetRequest(
         serviceHtml,
@@ -94,7 +94,7 @@
     if(document.querySelector(".about") == null){
       yoebar.remove_active_from_all_nav();
       document.querySelector("#about-nav").classList.add("active-nav");
-      //showLoading("#main-content");
+      showLoading("#main-content");
 
       $ajaxUtils.sendGetRequest(
         aboutHtml,
@@ -116,6 +116,7 @@
     if(document.querySelector(".contact") == null){
       yoebar.remove_active_from_all_nav();
       document.querySelector("#contact-nav").classList.add("active-nav");
+      showLoading("#main-content");
       $ajaxUtils.sendGetRequest(
         contactHtml,
         function (responseText) {
@@ -268,7 +269,7 @@
   ///////////comming soon ajax load/////////////////
   var loadCommingSoonPage = function () {
     if(document.querySelector(".comming-soon") == null){
-      //showLoading("#main-content");
+      showLoading("#main-content");
       $ajaxUtils.sendGetRequest(commingSoomHtml,
       function (responseText) {
         document.querySelector("#main-content").innerHTML = responseText
