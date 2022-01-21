@@ -97,12 +97,12 @@ app.post('/contact',(req,res)=>{
 });
 
 
-// const server = http.createServer(app);
-// server.listen(port,()=>{
-//     console.log(`listening on port${port}`);
-// });
-const httpsServer = https.createServer(options,app);
-httpsServer.listen(Sport,()=>{
-
-     console.log(`listening on port${Sport}`);
+const server = http.createServer(app);
+server.listen(port,()=>{
+    console.log(`listening on port${port}`);
 });
+// const httpsServer = https.createServer(options,app);
+// httpsServer.listen(Sport,()=>{
+
+//      console.log(`listening on port${Sport}`);
+// });
