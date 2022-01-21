@@ -13,10 +13,10 @@ const port = process.env.PORT||80;
 const Sport = process.env.PORT||443;
 const bodyparser = require('body-parser');
 const ssl = __dirname + "/ssl"
-var options = {
-    key: fs.readFileSync(ssl +"/key.pem"),
-    cert: fs.readFileSync(ssl +"/crt.pem")
-  };
+// var options = {
+//     key: fs.readFileSync(ssl +"/key.pem"),
+//     cert: fs.readFileSync(ssl +"/crt.pem")
+//   };
 
 const storage  = multer.diskStorage({
     destination:(req,file,cb)=>{
