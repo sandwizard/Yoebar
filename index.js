@@ -16,7 +16,6 @@ const ssl = __dirname + "/ssl"
 var options = {
     key: fs.readFileSync(ssl +"/server.key"),
     cert: fs.readFileSync(ssl +"/server.crt"),
-    ca: fs.readFileSync(ssl +"/server.pem"),
   };
 
 const storage  = multer.diskStorage({
@@ -103,9 +102,6 @@ server.listen(port,()=>{
     console.log(`listening on port${port}`);
 });
 const httpsServer = https.createServer(options,app);
-
-
-
 httpsServer.listen(Sport,()=>{
 
      console.log(`listening on port${Sport}`);
