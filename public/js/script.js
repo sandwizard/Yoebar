@@ -16,7 +16,7 @@
   var prevScrollpos = global.pageYOffset;
   global.onscroll = function() {
   var currentScrollPos = global.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
+  if (prevScrollpos > currentScrollPos || window.pageYOffset < 50) {
     document.getElementById("header-nav").classList.add("navbar-appear");
     document.getElementById("header-nav").classList.remove("navbar-dissappear");
   } else {
