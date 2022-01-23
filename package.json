@@ -4,8 +4,8 @@
   "description": "web packages",
   "main": "index.js",
   "scripts": {
-    "build": "node index.js",
-    "start": "nodemon index",
+    "build": "node app.js",
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -4,6 +4,7 @@ body {
   color: #312d2d;
   font-weight: 300;
   font-family: 'Roboto', sans-serif;
+  overscroll-behavior-y: none;
   
 }
 #tank-carousel{
