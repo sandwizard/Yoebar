@@ -77,8 +77,7 @@
             .innerHTML = responseText;
           yoebar.animations();
           let sec = document.querySelector(section);
-          console.log(sec);
-          sec.scrollIntoView(true);         
+          console.log(sec);       
         },
         false);
 
