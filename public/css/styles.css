@@ -7,8 +7,32 @@ body {
   overscroll-behavior-y: none;
   
 }
+
 strong{
   display: inline !important;
+}
+.content-section a, .content-section a:focus{
+  position: relative;
+  color: #3ca78e;
+  transition: 100ms ease-in;
+  font-style: italic;
+  bottom: 0;
+}
+.content-section a:hover, .content-section a:hover{
+  color: #72D6BF;
+  bottom:0.4rem;
+}
+#pipes-section a{
+  color: #E0A370;
+}
+#pipes-section a:hover{
+  color: #F5C396;
+}
+#tools-section a{
+  color: #939AD8;
+}
+#tools-section a:hover{
+  color: #B3B7EE;
 }
 #wholeSale-content p{
   font-size: 1.2rem;
@@ -577,26 +601,8 @@ label{
   align-items: center;
   padding:1%;
 }
-.home-graphic div::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform: scaleX(0);
-  transition: 250ms ease-in;
-  border-top: dotted 1px white;
-  border-bottom: dotted 1px white;
-}
-.home-graphic div::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform: scaleY(0);
-  transition: 250ms ease-in;
-  border-left: dotted 1px white;
-  border-right: dotted 1px white;
-}
+
+
 .home-graphic div{
   position: absolute;
   display: flex;
@@ -611,18 +617,9 @@ label{
   height: 80%;
  
 }
-.home-graphic div img{
-  width:50%;
-  height: auto;
-  opacity: 0.7;
-}
-.home-graphic:hover div{
-  opacity: 1;
-}
 
-.home-graphic div{
-  opacity: 0;
-}
+
+
 .home-graphic h2{
   position: absolute;
   transform: scale(0);
@@ -632,36 +629,9 @@ label{
   font-size: 1em;
 
 }
-.home-graphic:hover h2{
-  transform: scale(1);
-}
-.home-graphic:hover div::before{
-  transform: scaleX(1.1);
-}
-.home-graphic:hover div::after{
-  transform: scaleY(1.1);
-}
-.home-graphic::after{
-  content: "";
-  font-size: 1em;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #2F323A;
-  opacity: 0;
-  top:0;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  left: 0;
-  transition:  200ms ease-in;
-}
-.home-graphic:hover::after{
-  opacity: 0.4;  
 
-}
+
 @keyframes tonext {
   75% {
     left: 0;
