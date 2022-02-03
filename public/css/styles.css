@@ -822,6 +822,8 @@ header{
   background-size: 45px 45px;
   margin-top: 5px;
   margin-bottom: 5px;
+  background-color: #F5C396;
+  border-radius: 50%;
 }
 
 #location-img{
@@ -2036,7 +2038,6 @@ header{
   }
 
   #logo-img{
-
     width: 40px;
     height: 40px;
     background-size: 40px 40px;
