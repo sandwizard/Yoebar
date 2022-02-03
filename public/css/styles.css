@@ -11,6 +11,12 @@ body {
 strong{
   display: inline !important;
 }
+.about h2{
+  font-size: 1.4rem;
+}
+.about p{
+  margin-bottom: 60px;
+}
 .content-section a, .content-section a:focus{
   position: relative;
   color: #3ca78e;
