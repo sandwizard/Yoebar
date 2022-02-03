@@ -8,15 +8,9 @@ const multer= require('multer');
 const host = 'localhost';
 const uuid = require('uuid').v4;
 const nodemailer = require("nodemailer");
-const route = express.Router();
 const port = process.env.PORT||3000;
-const Sport = process.env.PORT||5000;
 const bodyparser = require('body-parser');
-const ssl = __dirname + "/ssl"
-// var options = {
-//     key: fs.readFileSync(ssl +"/key.pem"),
-//     cert: fs.readFileSync(ssl +"/crt.pem")
-//   };
+
 
 const storage  = multer.diskStorage({
     destination:(req,file,cb)=>{
@@ -93,16 +87,8 @@ app.post('/contact',(req,res)=>{
             res.send('success');                  
         }                      
     });    
-    // console.log(req);     
 });
-
-
 const server = http.createServer(app);
 server.listen(port,()=>{
     console.log(`listening on port${port}`);
 });
-// const httpsServer = https.createServer(options,app);
-// httpsServer.listen(Sport,()=>{
-
-//      console.log(`listening on port${Sport}`);
-// });
