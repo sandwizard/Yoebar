@@ -88,7 +88,7 @@ app.post('/contact',(req,res)=>{
         }                      
     });    
 });
-const server = http.createServer(app);
-server.listen(port,()=>{
+
+app.listen(port,()=>{
     console.log(`listening on port${port}`);
 });
